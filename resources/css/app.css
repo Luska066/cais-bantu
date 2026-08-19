@@ -1,0 +1,185 @@
+@import 'tailwindcss';
+
+@import 'tw-animate-css';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --font-sans:
+        'DM Sans', ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+
+    --font-display: 'Lexend Deca', sans-serif;
+    --font-heading: 'Lexend Deca', sans-serif;
+
+    --radius-xl: 1rem;
+    --radius-lg: var(--radius);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-sm: calc(var(--radius) - 4px);
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+    /* Instituto Bantu - Light Mode Palette */
+    --background: #F2F5FF;
+    --foreground: #0D1640;
+    --card: #FFFFFF;
+    --card-foreground: #0D1640;
+    --popover: #FFFFFF;
+    --popover-foreground: #0D1640;
+    --primary: #1A4FD6;
+    --primary-foreground: #FFFFFF;
+    --secondary: #E8EEFF;
+    --secondary-foreground: #1A4FD6;
+    --muted: #EEF0F8;
+    --muted-foreground: #5B6589;
+    --accent: #FFBE00;
+    --accent-foreground: #0D1640;
+    --destructive: #DC2626;
+    --destructive-foreground: #FFFFFF;
+    --border: rgba(26, 79, 214, 0.12);
+    --input: rgba(26, 79, 214, 0.16);
+    --ring: #1A4FD6;
+    --chart-1: #1A4FD6;
+    --chart-2: #FFBE00;
+    --chart-3: #22C55E;
+    --chart-4: #F97316;
+    --chart-5: #8B5CF6;
+    --radius: 0.75rem;
+
+    /* Sidebar - Instituto Bantu Deep Navy */
+    --sidebar: #0D1640;
+    --sidebar-foreground: #9AA5C4;
+    --sidebar-primary: #FFBE00;
+    --sidebar-primary-foreground: #0D1640;
+    --sidebar-accent: rgba(255, 255, 255, 0.10);
+    --sidebar-accent-foreground: #FFFFFF;
+    --sidebar-border: rgba(255, 255, 255, 0.10);
+    --sidebar-ring: #FFBE00;
+}
+
+.dark {
+    /* Instituto Bantu - Dark Mode Palette */
+    --background: #0D1640;
+    --foreground: #FFFFFF;
+    --card: #131F53;
+    --card-foreground: #FFFFFF;
+    --popover: #131F53;
+    --popover-foreground: #FFFFFF;
+    --primary: #1A4FD6;
+    --primary-foreground: #FFFFFF;
+    --secondary: #1E2D6D;
+    --secondary-foreground: #FFFFFF;
+    --muted: #1E2D6D;
+    --muted-foreground: #A0AEC0;
+    --accent: #FFBE00;
+    --accent-foreground: #0D1640;
+    --destructive: #DC2626;
+    --destructive-foreground: #FFFFFF;
+    --border: rgba(255, 255, 255, 0.10);
+    --input: rgba(255, 255, 255, 0.15);
+    --ring: #FFBE00;
+    --chart-1: #1A4FD6;
+    --chart-2: #FFBE00;
+    --chart-3: #22C55E;
+    --chart-4: #F97316;
+    --chart-5: #8B5CF6;
+
+    /* Sidebar - Dark Mode */
+    --sidebar: #090F2C;
+    --sidebar-foreground: #9AA5C4;
+    --sidebar-primary: #FFBE00;
+    --sidebar-primary-foreground: #0D1640;
+    --sidebar-accent: rgba(255, 255, 255, 0.10);
+    --sidebar-accent-foreground: #FFFFFF;
+    --sidebar-border: rgba(255, 255, 255, 0.10);
+    --sidebar-ring: #FFBE00;
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground font-sans;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-display);
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(26, 79, 214, 0.25);
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(26, 79, 214, 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
