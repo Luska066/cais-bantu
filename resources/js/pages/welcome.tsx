@@ -45,6 +45,7 @@ import {
     DialogTitle,
 } from '@/components/ui/dialog';
 import { dashboard, login } from '@/routes';
+import { ScrollReveal } from '@/components/scroll-reveal';
 
 const iconMap: Record<string, any> = {
     Laptop,
@@ -425,7 +426,7 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                        <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <ScrollReveal direction="up" delay={50} className="lg:col-span-7 space-y-6 text-center lg:text-left">
                             <Badge className="bg-[#FFBE00] text-[#0D1640] font-bold py-1 px-3.5 text-xs hover:bg-[#FFBE00]/90">
                                 <Sparkles className="size-3.5 mr-1.5" />
                                 {heroBadge}
@@ -462,10 +463,10 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                     </Button>
                                 </a>
                             </div>
-                        </div>
+                        </ScrollReveal>
 
                         {/* Right Hero Card: Metas */}
-                        <div className="lg:col-span-5">
+                        <ScrollReveal direction="left" delay={200} className="lg:col-span-5">
                             <div className="relative rounded-3xl bg-white/5 p-6 sm:p-8 border border-white/15 backdrop-blur-xl shadow-2xl space-y-6">
                                 <div className="flex items-center justify-between border-b border-white/10 pb-4">
                                     <div>
@@ -509,16 +510,16 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
 
             {/* 4. O PROJETO & INSTITUTO CULTURAL BANTU */}
-            <section id="projeto" className="py-20 bg-[#F2F5FF] dark:bg-[#090F2C]">
+            <section id="projeto" className="py-20 bg-[#F2F5FF] dark:bg-[#090F2C] overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                        <div className="lg:col-span-6 space-y-6">
+                        <ScrollReveal direction="right" delay={100} className="lg:col-span-6 space-y-6">
                             <Badge variant="outline" className="border-[#1A4FD6]/30 bg-[#1A4FD6]/10 text-[#1A4FD6] dark:text-[#9AA5C4] dark:border-white/10">
                                 Sobre a Iniciativa
                             </Badge>
@@ -573,10 +574,10 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
 
                         {/* Card Institucional do Instituto Cultural Bantu */}
-                        <div id="instituto" className="lg:col-span-6">
+                        <ScrollReveal direction="left" delay={200} className="lg:col-span-6">
                             <Card className="border-[#1A4FD6]/20 bg-card shadow-lg rounded-3xl p-6 sm:p-8">
                                 <CardHeader className="p-0 pb-4">
                                     <div className="flex items-center bg-[#0D1640] rounded-md gap-3">
@@ -622,15 +623,15 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                     </div>
                                 </CardContent>
                             </Card>
-                        </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
 
             {/* 5. POR QUE O CAIS BANTU? (TERRITÓRIO & DIAGNÓSTICO) */}
-            <section className="py-20 bg-[#0D1640] text-white">
+            <section className="py-20 bg-[#0D1640] text-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center max-w-3xl mx-auto space-y-4">
+                    <ScrollReveal direction="up" className="text-center max-w-3xl mx-auto space-y-4">
                         <Badge className="bg-[#FFBE00] text-[#0D1640] font-bold">
                             Compromisso Territorial
                         </Badge>
@@ -640,46 +641,52 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                         <p className="text-[#9AA5C4] text-base sm:text-lg leading-relaxed">
                             O projeto nasce como uma resposta às desigualdades sociais, raciais e econômicas vivenciadas nos territórios de <strong>Salvador</strong>, <strong>Vera Cruz</strong> e <strong>Ilha de Itaparica</strong>, promovendo acesso a direitos, inclusão social e produtiva e fortalecimento da autonomia.
                         </p>
-                    </div>
+                    </ScrollReveal>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
-                        <div className="rounded-2xl bg-white/5 border border-white/10 p-6 space-y-3 hover:bg-white/10 transition-colors">
-                            <div className="flex size-12 items-center justify-center rounded-xl bg-[#1A4FD6] text-white font-bold text-xl">
-                                01
+                        <ScrollReveal direction="up" delay={100}>
+                            <div className="rounded-2xl bg-white/5 border border-white/10 p-6 space-y-3 hover:bg-white/10 transition-colors h-full">
+                                <div className="flex size-12 items-center justify-center rounded-xl bg-[#1A4FD6] text-white font-bold text-xl">
+                                    01
+                                </div>
+                                <h3 className="font-display text-xl font-bold text-white">Superação de Desigualdades</h3>
+                                <p className="text-sm text-[#9AA5C4] leading-relaxed">
+                                    Ampliar o acesso a direitos, oportunidades e serviços para pessoas em situação de vulnerabilidade social.
+                                </p>
                             </div>
-                            <h3 className="font-display text-xl font-bold text-white">Superação de Desigualdades</h3>
-                            <p className="text-sm text-[#9AA5C4] leading-relaxed">
-                                Ampliar o acesso a direitos, oportunidades e serviços para pessoas em situação de vulnerabilidade social.
-                            </p>
-                        </div>
+                        </ScrollReveal>
 
-                        <div className="rounded-2xl bg-white/5 border border-white/10 p-6 space-y-3 hover:bg-white/10 transition-colors">
-                            <div className="flex size-12 items-center justify-center rounded-xl bg-[#FFBE00] text-[#0D1640] font-bold text-xl">
-                                02
+                        <ScrollReveal direction="up" delay={200}>
+                            <div className="rounded-2xl bg-white/5 border border-white/10 p-6 space-y-3 hover:bg-white/10 transition-colors h-full">
+                                <div className="flex size-12 items-center justify-center rounded-xl bg-[#FFBE00] text-[#0D1640] font-bold text-xl">
+                                    02
+                                </div>
+                                <h3 className="font-display text-xl font-bold text-white">Inclusão Social e Produtiva</h3>
+                                <p className="text-sm text-[#9AA5C4] leading-relaxed">
+                                    Promover qualificação, autonomia e oportunidades de inclusão produtiva, trabalho decente e desenvolvimento socioeconômico.
+                                </p>
                             </div>
-                            <h3 className="font-display text-xl font-bold text-white">Inclusão Social e Produtiva</h3>
-                            <p className="text-sm text-[#9AA5C4] leading-relaxed">
-                                Promover qualificação, autonomia e oportunidades de inclusão produtiva, trabalho decente e desenvolvimento socioeconômico.
-                            </p>
-                        </div>
+                        </ScrollReveal>
 
-                        <div className="rounded-2xl bg-white/5 border border-white/10 p-6 space-y-3 hover:bg-white/10 transition-colors">
-                            <div className="flex size-12 items-center justify-center rounded-xl bg-emerald-500 text-white font-bold text-xl">
-                                03
+                        <ScrollReveal direction="up" delay={300}>
+                            <div className="rounded-2xl bg-white/5 border border-white/10 p-6 space-y-3 hover:bg-white/10 transition-colors h-full">
+                                <div className="flex size-12 items-center justify-center rounded-xl bg-emerald-500 text-white font-bold text-xl">
+                                    03
+                                </div>
+                                <h3 className="font-display text-xl font-bold text-white">Fortalecimento Comunitário</h3>
+                                <p className="text-sm text-[#9AA5C4] leading-relaxed">
+                                    Fortalecer vínculos comunitários, redes de cooperação, cuidado psicossocial e estratégias de autonomia nos territórios atendidos.
+                                </p>
                             </div>
-                            <h3 className="font-display text-xl font-bold text-white">Fortalecimento Comunitário</h3>
-                            <p className="text-sm text-[#9AA5C4] leading-relaxed">
-                                Fortalecer vínculos comunitários, redes de cooperação, cuidado psicossocial e estratégias de autonomia nos territórios atendidos.
-                            </p>
-                        </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
 
             {/* 6. QUEM PODE PARTICIPAR? (PÚBLICO-ALVO) */}
-            <section id="publico" className="py-20 bg-[#F2F5FF] dark:bg-[#090F2C]">
+            <section id="publico" className="py-20 bg-[#F2F5FF] dark:bg-[#090F2C] overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center max-w-3xl mx-auto space-y-4">
+                    <ScrollReveal direction="up" className="text-center max-w-3xl mx-auto space-y-4">
                         <Badge variant="outline" className="border-[#1A4FD6]/30 bg-[#1A4FD6]/10 text-[#1A4FD6] dark:text-[#9AA5C4]">
                             {criteriaBadge}
                         </Badge>
@@ -689,7 +696,7 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                         <p className="text-muted-foreground text-base sm:text-lg">
                             {criteriaDescription}
                         </p>
-                    </div>
+                    </ScrollReveal>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
                         {displayCriteria.map((aud: any, index: number) => {
@@ -698,28 +705,30 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                 : (iconMap[aud.icon] ?? Users);
 
                             return (
-                                <Card key={aud.id ?? index} className="rounded-2xl hover:border-primary/50 transition-all hover:shadow-md flex flex-col justify-between">
-                                    <CardContent className="p-5 space-y-3">
-                                        <div className="flex items-center justify-between">
-                                            <div className="flex size-10 items-center justify-center rounded-xl bg-secondary text-secondary-foreground">
-                                                <IconComp className="size-5 text-[#1A4FD6]" />
+                                <ScrollReveal key={aud.id ?? index} direction="up" delay={index * 100}>
+                                    <Card className="rounded-2xl hover:border-primary/50 transition-all hover:shadow-md flex flex-col justify-between h-full">
+                                        <CardContent className="p-5 space-y-3">
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex size-10 items-center justify-center rounded-xl bg-secondary text-secondary-foreground">
+                                                    <IconComp className="size-5 text-[#1A4FD6]" />
+                                                </div>
+                                                {aud.badge && (
+                                                    <Badge variant="outline" className="text-[10px] font-bold">
+                                                        {aud.badge}
+                                                    </Badge>
+                                                )}
                                             </div>
-                                            {aud.badge && (
-                                                <Badge variant="outline" className="text-[10px] font-bold">
-                                                    {aud.badge}
-                                                </Badge>
-                                            )}
-                                        </div>
-                                        <div>
-                                            <h3 className="font-display font-bold text-base text-foreground leading-snug">
-                                                {aud.title}
-                                            </h3>
-                                            <p className="text-xs text-muted-foreground leading-relaxed mt-1.5">
-                                                {aud.description || aud.desc}
-                                            </p>
-                                        </div>
-                                    </CardContent>
-                                </Card>
+                                            <div>
+                                                <h3 className="font-display font-bold text-base text-foreground leading-snug">
+                                                    {aud.title}
+                                                </h3>
+                                                <p className="text-xs text-muted-foreground leading-relaxed mt-1.5">
+                                                    {aud.description || aud.desc}
+                                                </p>
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+                                </ScrollReveal>
                             );
                         })}
                     </div>
@@ -727,9 +736,9 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
             </section>
 
             {/* 7. FORMAÇÃO PROFISSIONAL (CURSOS DINÂMICOS) */}
-            <section id="cursos" className="py-20 bg-white dark:bg-[#0D1640]">
+            <section id="cursos" className="py-20 bg-white dark:bg-[#0D1640] overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center max-w-3xl mx-auto space-y-4">
+                    <ScrollReveal direction="up" className="text-center max-w-3xl mx-auto space-y-4">
                         <Badge className="bg-[#FFBE00] text-[#0D1640] font-bold">
                             Qualificação Profissional
                         </Badge>
@@ -739,94 +748,98 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                         <p className="text-muted-foreground text-base sm:text-lg">
                             Cursos práticos de 160 horas com certificação oficial, material didático incluso e suporte à inserção no mercado.
                         </p>
-                    </div>
+                    </ScrollReveal>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-                        {courses.map((course) => {
+                        {courses.map((course, idx) => {
                             const IconComponent = iconMap[course.icon] ?? Laptop;
 
                             return (
-                                <Card key={course.id} className="flex flex-col justify-between rounded-3xl border-border hover:border-primary/50 transition-all hover:shadow-lg">
-                                    <CardHeader className="space-y-3">
-                                        <div className="flex items-center justify-between">
-                                            <div className="flex size-12 items-center justify-center rounded-2xl bg-secondary text-secondary-foreground">
-                                                <IconComponent className="size-6 text-[#1A4FD6]" />
+                                <ScrollReveal key={course.id} direction="up" delay={idx * 100}>
+                                    <Card className="flex flex-col justify-between rounded-3xl border-border hover:border-primary/50 transition-all hover:shadow-lg h-full">
+                                        <CardHeader className="space-y-3">
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex size-12 items-center justify-center rounded-2xl bg-secondary text-secondary-foreground">
+                                                    <IconComponent className="size-6 text-[#1A4FD6]" />
+                                                </div>
+                                                <Badge className={`text-xs font-semibold px-2.5 py-1 ${course.badge_color ?? 'bg-[#1A4FD6] text-white'}`}>
+                                                    {course.hours}
+                                                </Badge>
                                             </div>
-                                            <Badge className={`text-xs font-semibold px-2.5 py-1 ${course.badge_color ?? 'bg-[#1A4FD6] text-white'}`}>
-                                                {course.hours}
-                                            </Badge>
-                                        </div>
-                                        <div>
-                                            <span className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
-                                                {course.category}
-                                            </span>
-                                            <CardTitle className="text-xl mt-1">{course.title}</CardTitle>
-                                        </div>
-                                        <CardDescription className="text-sm leading-relaxed">
-                                            {course.description}
-                                        </CardDescription>
-                                    </CardHeader>
-
-                                    <CardContent className="space-y-4 border-t border-border/60 pt-4">
-                                        {course.topics && course.topics.length > 0 && (
                                             <div>
-                                                <span className="text-xs font-bold text-foreground block mb-2">
-                                                    O que você vai aprender:
+                                                <span className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+                                                    {course.category}
                                                 </span>
-                                                <ul className="space-y-1 text-xs text-muted-foreground">
-                                                    {course.topics.map((t, idx) => (
-                                                        <li key={idx} className="flex items-center gap-2">
-                                                            <CheckCircle2 className="size-3.5 text-emerald-500 shrink-0" />
-                                                            <span>{t}</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
+                                                <CardTitle className="text-xl mt-1">{course.title}</CardTitle>
                                             </div>
-                                        )}
+                                            <CardDescription className="text-sm leading-relaxed">
+                                                {course.description}
+                                            </CardDescription>
+                                        </CardHeader>
 
-                                        <a href="#inscricoes" className="block pt-2">
-                                            <Button
-                                                variant="default"
-                                                className="w-full bg-[#1A4FD6] hover:bg-[#1540B5] text-white font-semibold text-xs sm:text-sm"
-                                            >
-                                                📍 Onde se Inscrever Presencialmente
-                                            </Button>
-                                        </a>
-                                    </CardContent>
-                                </Card>
+                                        <CardContent className="space-y-4 border-t border-border/60 pt-4">
+                                            {course.topics && course.topics.length > 0 && (
+                                                <div>
+                                                    <span className="text-xs font-bold text-foreground block mb-2">
+                                                        O que você vai aprender:
+                                                    </span>
+                                                    <ul className="space-y-1 text-xs text-muted-foreground">
+                                                        {course.topics.map((t, topicIdx) => (
+                                                            <li key={topicIdx} className="flex items-center gap-2">
+                                                                <CheckCircle2 className="size-3.5 text-emerald-500 shrink-0" />
+                                                                <span>{t}</span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            )}
+
+                                            <a href="#inscricoes" className="block pt-2">
+                                                <Button
+                                                    variant="default"
+                                                    className="w-full bg-[#1A4FD6] hover:bg-[#1540B5] text-white font-semibold text-xs sm:text-sm"
+                                                >
+                                                    📍 Onde se Inscrever Presencialmente
+                                                </Button>
+                                            </a>
+                                        </CardContent>
+                                    </Card>
+                                </ScrollReveal>
                             );
                         })}
 
                         {/* Card Diferencial Bantu */}
-                        <div className="flex flex-col justify-between rounded-3xl bg-gradient-to-br from-[#0D1640] to-[#1A4FD6] p-8 text-white shadow-xl">
-                            <div className="space-y-4">
-                                <Badge className="bg-[#FFBE00] text-[#0D1640] font-bold">
-                                    Diferencial Bantu
-                                </Badge>
-                                <h3 className="font-display text-2xl font-bold">
-                                    Metodologia Afrocentrada & Capoeira Angola
-                                </h3>
-                                <p className="text-sm text-white/80 leading-relaxed">
-                                    Todos os cursos integram vivências de Capoeira Angola, acolhimento psicossocial contínuo, ética comunitária e desenvolvimento pessoal para formar cidadãos completos.
-                                </p>
+                        <ScrollReveal direction="up" delay={courses.length * 100}>
+                            <div className="flex flex-col justify-between rounded-3xl bg-gradient-to-br from-[#0D1640] to-[#1A4FD6] p-8 text-white shadow-xl h-full">
+                                <div className="space-y-4">
+                                    <Badge className="bg-[#FFBE00] text-[#0D1640] font-bold">
+                                        Diferencial Bantu
+                                    </Badge>
+                                    <h3 className="font-display text-2xl font-bold">
+                                        Metodologia Afrocentrada & Capoeira Angola
+                                    </h3>
+                                    <p className="text-sm text-white/80 leading-relaxed">
+                                        Todos os cursos integram vivências de Capoeira Angola, acolhimento psicossocial contínuo, ética comunitária e desenvolvimento pessoal para formar cidadãos completos.
+                                    </p>
+                                </div>
+                                <div className="pt-6">
+                                    <a href="#metodologia">
+                                        <Button variant="accent" className="w-full bg-[#FFBE00] text-[#0D1640] font-bold">
+                                            Conheça Nossa Metodologia
+                                        </Button>
+                                    </a>
+                                </div>
                             </div>
-                            <div className="pt-6">
-                                <a href="#metodologia">
-                                    <Button variant="accent" className="w-full bg-[#FFBE00] text-[#0D1640] font-bold">
-                                        Conheça Nossa Metodologia
-                                    </Button>
-                                </a>
-                            </div>
-                        </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
 
             {/* 8. METODOLOGIA AFROCENTRADA & ACOLHIMENTO PSICOSSOCIAL */}
-            <section id="metodologia" className="py-20 bg-[#F2F5FF] dark:bg-[#090F2C]">
+            <section id="metodologia" className="py-20 bg-[#F2F5FF] dark:bg-[#090F2C] overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                        <div className="lg:col-span-6 space-y-6">
+                        <ScrollReveal direction="right" delay={100} className="lg:col-span-6 space-y-6">
                             <Badge variant="outline" className="border-[#1A4FD6]/30 bg-[#1A4FD6]/10 text-[#1A4FD6] dark:text-[#9AA5C4]">
                                 Tecnologia Social & Ancestralidade
                             </Badge>
@@ -868,10 +881,10 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
 
                         {/* Bloco de Acolhimento em Destaque */}
-                        <div className="lg:col-span-6">
+                        <ScrollReveal direction="left" delay={200} className="lg:col-span-6">
                             <div className="rounded-3xl bg-[#0D1640] p-8 text-white shadow-2xl border border-white/10 space-y-6">
                                 <div className="flex items-center gap-3">
                                     <div className="flex size-12 items-center justify-center rounded-2xl bg-[#FFBE00] text-[#0D1640] font-bold">
@@ -910,15 +923,15 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
 
             {/* 9. UNIDADES TERRITORIAIS (SALVADOR & VERA CRUZ) */}
-            <section id="unidades" className="py-20 bg-white dark:bg-[#0D1640]">
+            <section id="unidades" className="py-20 bg-white dark:bg-[#0D1640] overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center max-w-3xl mx-auto space-y-4">
+                    <ScrollReveal direction="up" className="text-center max-w-3xl mx-auto space-y-4">
                         <Badge className="bg-[#FFBE00] text-[#0D1640] font-bold">
                             Territórios Atendidos
                         </Badge>
@@ -928,123 +941,124 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                         <p className="text-muted-foreground text-base sm:text-lg">
                             Espaços estruturados para receber participantes com segurança, laboratórios equipados e ambiente acolhedor.
                         </p>
-                    </div>
+                    </ScrollReveal>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                        {displayUnits.map((unit) => {
+                        {displayUnits.map((unit, unitIdx) => {
                             const isAmber = unit.color_theme === 'amber' || unit.slug.includes('veracruz');
                             const isEmerald = unit.color_theme === 'emerald';
                             const isSelected = selectedUnit === unit.slug;
 
                             return (
-                                <Card
-                                    key={unit.id}
-                                    className={`rounded-3xl border-2 transition-all p-6 sm:p-8 ${isSelected
-                                        ? isAmber
-                                            ? 'border-[#FFBE00] shadow-xl'
-                                            : isEmerald
-                                                ? 'border-emerald-500 shadow-xl'
-                                                : 'border-[#1A4FD6] shadow-xl'
-                                        : 'border-border'
-                                        }`}
-                                >
-                                    <div className="flex items-center justify-between pb-4 border-b border-border/80">
-                                        <div className="flex items-center gap-3">
-                                            <div
-                                                className={`flex size-12 items-center justify-center rounded-2xl ${isAmber
-                                                    ? 'bg-[#FFBE00]/20 text-[#0D1640]'
-                                                    : isEmerald
-                                                        ? 'bg-emerald-500/20 text-emerald-600'
-                                                        : 'bg-secondary text-secondary-foreground'
-                                                    }`}
-                                            >
-                                                {unit.icon === 'Trees' ? (
-                                                    <Trees className={`size-6 ${isAmber ? 'text-amber-600 dark:text-[#FFBE00]' : 'text-emerald-600'}`} />
-                                                ) : (
-                                                    <Building2 className="size-6 text-[#1A4FD6]" />
-                                                )}
-                                            </div>
-                                            <div>
-                                                <CardTitle className="text-xl">{unit.name}</CardTitle>
-                                                <CardDescription>{unit.subtitle || `Polo ${unit.slug}`}</CardDescription>
-                                            </div>
-                                        </div>
-                                        <Badge
-                                            className={
-                                                isAmber
-                                                    ? 'bg-[#FFBE00] text-[#0D1640] font-bold'
-                                                    : isEmerald
-                                                        ? 'bg-emerald-600 text-white'
-                                                        : 'bg-[#1A4FD6] text-white'
-                                            }
-                                        >
-                                            {unit.badge || '5 Turmas'}
-                                        </Badge>
-                                    </div>
-
-                                    <div className="space-y-4 pt-4 text-sm text-muted-foreground">
-                                        {unit.description && (
-                                            <p className="text-xs sm:text-sm leading-relaxed text-muted-foreground">
-                                                {unit.description}
-                                            </p>
-                                        )}
-
-                                        <div className="space-y-2.5 pt-2 border-t border-border/80 text-xs">
-                                            {/* Endereço */}
-                                            <div className="flex items-start gap-2.5 text-foreground font-medium">
-                                                <MapPin className={`size-4 ${isAmber ? 'text-amber-600 dark:text-[#FFBE00]' : isEmerald ? 'text-emerald-600' : 'text-primary'} shrink-0 mt-0.5`} />
-                                                <span>{unit.address || (unit.slug.includes('veracruz') ? contactAddressVeracruz : contactAddressSalvador)}</span>
-                                            </div>
-
-                                            {/* Turnos */}
-                                            {(unit.shifts || true) && (
-                                                <div className="flex items-center gap-2.5 text-foreground font-medium">
-                                                    <Clock className={`size-4 ${isAmber ? 'text-amber-600 dark:text-[#FFBE00]' : isEmerald ? 'text-emerald-600' : 'text-primary'} shrink-0`} />
-                                                    <span>{unit.shifts || 'Turnos: Matutino, Vespertino e Noturno'}</span>
+                                <ScrollReveal key={unit.id} direction="up" delay={unitIdx * 150}>
+                                    <Card
+                                        className={`rounded-3xl border-2 transition-all p-6 sm:p-8 h-full ${isSelected
+                                            ? isAmber
+                                                ? 'border-[#FFBE00] shadow-xl'
+                                                : isEmerald
+                                                    ? 'border-emerald-500 shadow-xl'
+                                                    : 'border-[#1A4FD6] shadow-xl'
+                                            : 'border-border'
+                                            }`}
+                                    >
+                                        <div className="flex items-center justify-between pb-4 border-b border-border/80">
+                                            <div className="flex items-center gap-3">
+                                                <div
+                                                    className={`flex size-12 items-center justify-center rounded-2xl ${isAmber
+                                                        ? 'bg-[#FFBE00]/20 text-[#0D1640]'
+                                                        : isEmerald
+                                                            ? 'bg-emerald-500/20 text-emerald-600'
+                                                            : 'bg-secondary text-secondary-foreground'
+                                                        }`}
+                                                >
+                                                    {unit.icon === 'Trees' ? (
+                                                        <Trees className={`size-6 ${isAmber ? 'text-amber-600 dark:text-[#FFBE00]' : 'text-emerald-600'}`} />
+                                                    ) : (
+                                                        <Building2 className="size-6 text-[#1A4FD6]" />
+                                                    )}
                                                 </div>
+                                                <div>
+                                                    <CardTitle className="text-xl">{unit.name}</CardTitle>
+                                                    <CardDescription>{unit.subtitle || `Polo ${unit.slug}`}</CardDescription>
+                                                </div>
+                                            </div>
+                                            <Badge
+                                                className={
+                                                    isAmber
+                                                        ? 'bg-[#FFBE00] text-[#0D1640] font-bold'
+                                                        : isEmerald
+                                                            ? 'bg-emerald-600 text-white'
+                                                            : 'bg-[#1A4FD6] text-white'
+                                                }
+                                            >
+                                                {unit.badge || '5 Turmas'}
+                                            </Badge>
+                                        </div>
+
+                                        <div className="space-y-4 pt-4 text-sm text-muted-foreground">
+                                            {unit.description && (
+                                                <p className="text-xs sm:text-sm leading-relaxed text-muted-foreground">
+                                                    {unit.description}
+                                                </p>
                                             )}
 
-                                            {/* Telefone / WhatsApp */}
-                                            <div className="flex items-center gap-2.5 text-foreground">
-                                                <Phone className={`size-4 ${isAmber ? 'text-amber-600 dark:text-[#FFBE00]' : isEmerald ? 'text-emerald-600' : 'text-primary'} shrink-0`} />
-                                                <span>
-                                                    {unit.phone || contactPhone}
-                                                </span>
-                                                <a
-                                                    href={`https://wa.me/55${(unit.phone || contactPhone).replace(/\D/g, '')}`}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-emerald-400 hover:underline ml-2"
-                                                >
-                                                    <MessageCircle className="size-3" />
-                                                    <span>WhatsApp</span>
-                                                </a>
+                                            <div className="space-y-2.5 pt-2 border-t border-border/80 text-xs">
+                                                {/* Endereço */}
+                                                <div className="flex items-start gap-2.5 text-foreground font-medium">
+                                                    <MapPin className={`size-4 ${isAmber ? 'text-amber-600 dark:text-[#FFBE00]' : isEmerald ? 'text-emerald-600' : 'text-primary'} shrink-0 mt-0.5`} />
+                                                    <span>{unit.address || (unit.slug.includes('veracruz') ? contactAddressVeracruz : contactAddressSalvador)}</span>
+                                                </div>
+
+                                                {/* Turnos */}
+                                                {(unit.shifts || true) && (
+                                                    <div className="flex items-center gap-2.5 text-foreground font-medium">
+                                                        <Clock className={`size-4 ${isAmber ? 'text-amber-600 dark:text-[#FFBE00]' : isEmerald ? 'text-emerald-600' : 'text-primary'} shrink-0`} />
+                                                        <span>{unit.shifts || 'Turnos: Matutino, Vespertino e Noturno'}</span>
+                                                    </div>
+                                                )}
+
+                                                {/* Telefone / WhatsApp */}
+                                                <div className="flex items-center gap-2.5 text-foreground">
+                                                    <Phone className={`size-4 ${isAmber ? 'text-amber-600 dark:text-[#FFBE00]' : isEmerald ? 'text-emerald-600' : 'text-primary'} shrink-0`} />
+                                                    <span>
+                                                        {unit.phone || contactPhone}
+                                                    </span>
+                                                    <a
+                                                        href={`https://wa.me/55${(unit.phone || contactPhone).replace(/\D/g, '')}`}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-emerald-400 hover:underline ml-2"
+                                                    >
+                                                        <MessageCircle className="size-3" />
+                                                        <span>WhatsApp</span>
+                                                    </a>
+                                                </div>
+
+                                                {/* E-mail */}
+                                                <div className="flex items-center gap-2.5 text-foreground">
+                                                    <Mail className={`size-4 ${isAmber ? 'text-amber-600 dark:text-[#FFBE00]' : isEmerald ? 'text-emerald-600' : 'text-primary'} shrink-0`} />
+                                                    <a
+                                                        href={`mailto:${unit.email || contactEmail}`}
+                                                        className="hover:underline text-muted-foreground hover:text-foreground"
+                                                    >
+                                                        {unit.email || contactEmail}
+                                                    </a>
+                                                </div>
                                             </div>
 
-                                            {/* E-mail */}
-                                            <div className="flex items-center gap-2.5 text-foreground">
-                                                <Mail className={`size-4 ${isAmber ? 'text-amber-600 dark:text-[#FFBE00]' : isEmerald ? 'text-emerald-600' : 'text-primary'} shrink-0`} />
-                                                <a
-                                                    href={`mailto:${unit.email || contactEmail}`}
-                                                    className="hover:underline text-muted-foreground hover:text-foreground"
-                                                >
-                                                    {unit.email || contactEmail}
+                                            <div className="pt-2">
+                                                <a href="#inscricoes">
+                                                    <Button
+                                                        variant={isAmber ? 'accent' : 'default'}
+                                                        className={`w-full ${isAmber ? 'bg-[#FFBE00] text-[#0D1640] hover:bg-[#e6ab00] font-bold' : 'bg-[#1A4FD6] hover:bg-[#1540B5] text-white font-semibold'}`}
+                                                    >
+                                                        📍 Ver Endereço & Horários para Inscrição Presencial
+                                                    </Button>
                                                 </a>
                                             </div>
                                         </div>
-
-                                        <div className="pt-2">
-                                            <a href="#inscricoes">
-                                                <Button
-                                                    variant={isAmber ? 'accent' : 'default'}
-                                                    className={`w-full ${isAmber ? 'bg-[#FFBE00] text-[#0D1640] hover:bg-[#e6ab00] font-bold' : 'bg-[#1A4FD6] hover:bg-[#1540B5] text-white font-semibold'}`}
-                                                >
-                                                    📍 Ver Endereço & Horários para Inscrição Presencial
-                                                </Button>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </Card>
+                                    </Card>
+                                </ScrollReveal>
                             );
                         })}
                     </div>
@@ -1052,9 +1066,9 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
             </section>
 
             {/* 10. INSCRIÇÕES PRESENCIAIS & POLOS DE ATENDIMENTO (#inscricoes) */}
-            <section id="inscricoes" className="py-20 bg-gradient-to-b from-[#0D1640] to-[#121B48] text-white">
+            <section id="inscricoes" className="py-20 bg-gradient-to-b from-[#0D1640] to-[#121B48] text-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center space-y-4 mb-14 max-w-3xl mx-auto">
+                    <ScrollReveal direction="up" className="text-center space-y-4 mb-14 max-w-3xl mx-auto">
                         <Badge className="bg-[#FFBE00] text-[#0D1640] font-bold text-xs uppercase tracking-wider py-1 px-3">
                             Inscrições 100% Presenciais & Gratuitas
                         </Badge>
@@ -1064,232 +1078,241 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                         <p className="text-[#9AA5C4] text-base sm:text-lg leading-relaxed">
                             As matrículas e o acolhimento são realizados <strong>diretamente nos nossos polos físicos de atendimento</strong>. Escolha a unidade mais próxima, confira os horários e compareça com seus documentos para garantir sua vaga!
                         </p>
-                    </div>
+                    </ScrollReveal>
 
                     {/* Guia em 3 Passos Simples */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                        <div className="rounded-3xl bg-white/5 border border-white/10 p-6 space-y-3 backdrop-blur-md">
-                            <div className="flex size-12 items-center justify-center rounded-2xl bg-[#FFBE00] text-[#0D1640] font-display text-xl font-bold shadow-md">
-                                1
+                        <ScrollReveal direction="up" delay={100}>
+                            <div className="rounded-3xl bg-white/5 border border-white/10 p-6 space-y-3 backdrop-blur-md h-full">
+                                <div className="flex size-12 items-center justify-center rounded-2xl bg-[#FFBE00] text-[#0D1640] font-display text-xl font-bold shadow-md">
+                                    1
+                                </div>
+                                <h3 className="font-display text-lg font-bold text-white">
+                                    Escolha o Polo Territorial
+                                </h3>
+                                <p className="text-xs sm:text-sm text-[#9AA5C4] leading-relaxed">
+                                    Escolha a unidade mais próxima: <strong>Salvador – Núcleo SSA</strong> ou <strong>Vera Cruz – Casa Bantu Vila Rosa</strong>.
+                                </p>
                             </div>
-                            <h3 className="font-display text-lg font-bold text-white">
-                                Escolha o Polo Territorial
-                            </h3>
-                            <p className="text-xs sm:text-sm text-[#9AA5C4] leading-relaxed">
-                                Escolha a unidade mais próxima: <strong>Salvador – Núcleo SSA</strong> ou <strong>Vera Cruz – Casa Bantu Vila Rosa</strong>.
-                            </p>
-                        </div>
+                        </ScrollReveal>
 
-                        <div className="rounded-3xl bg-white/5 border border-white/10 p-6 space-y-3 backdrop-blur-md">
-                            <div className="flex size-12 items-center justify-center rounded-2xl bg-[#1A4FD6] text-white font-display text-xl font-bold shadow-md">
-                                2
+                        <ScrollReveal direction="up" delay={200}>
+                            <div className="rounded-3xl bg-white/5 border border-white/10 p-6 space-y-3 backdrop-blur-md h-full">
+                                <div className="flex size-12 items-center justify-center rounded-2xl bg-[#1A4FD6] text-white font-display text-xl font-bold shadow-md">
+                                    2
+                                </div>
+                                <h3 className="font-display text-lg font-bold text-white">
+                                    Separe seus Documentos
+                                </h3>
+                                <p className="text-xs sm:text-sm text-[#9AA5C4] leading-relaxed">
+                                    Leve seu <strong>RG / Documento com foto</strong>, <strong>CPF</strong> e <strong>Comprovante de Residência</strong> atualizado.
+                                </p>
                             </div>
-                            <h3 className="font-display text-lg font-bold text-white">
-                                Separe seus Documentos
-                            </h3>
-                            <p className="text-xs sm:text-sm text-[#9AA5C4] leading-relaxed">
-                                Leve seu <strong>RG / Documento com foto</strong>, <strong>CPF</strong> e <strong>Comprovante de Residência</strong> atualizado.
-                            </p>
-                        </div>
+                        </ScrollReveal>
 
-                        <div className="rounded-3xl bg-white/5 border border-white/10 p-6 space-y-3 backdrop-blur-md">
-                            <div className="flex size-12 items-center justify-center rounded-2xl bg-emerald-500 text-white font-display text-xl font-bold shadow-md">
-                                3
+                        <ScrollReveal direction="up" delay={300}>
+                            <div className="rounded-3xl bg-white/5 border border-white/10 p-6 space-y-3 backdrop-blur-md h-full">
+                                <div className="flex size-12 items-center justify-center rounded-2xl bg-emerald-500 text-white font-display text-xl font-bold shadow-md">
+                                    3
+                                </div>
+                                <h3 className="font-display text-lg font-bold text-white">
+                                    Compareça Pessoalmente
+                                </h3>
+                                <p className="text-xs sm:text-sm text-[#9AA5C4] leading-relaxed">
+                                    Dirija-se ao polo no horário de funcionamento. Nossa equipe de acolhimento fará sua matrícula e apresentação do curso.
+                                </p>
                             </div>
-                            <h3 className="font-display text-lg font-bold text-white">
-                                Compareça Pessoalmente
-                            </h3>
-                            <p className="text-xs sm:text-sm text-[#9AA5C4] leading-relaxed">
-                                Dirija-se ao polo no horário de funcionamento. Nossa equipe de acolhimento fará sua matrícula e apresentação do curso.
-                            </p>
-                        </div>
+                        </ScrollReveal>
                     </div>
 
                     {/* Cards dos Polos com Endereços Completos e Rotas */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        {displayUnits.map((unit) => {
+                        {displayUnits.map((unit, unitIdx) => {
                             const isAmber = unit.color_theme === 'amber' || unit.slug.includes('veracruz');
                             const isEmerald = unit.color_theme === 'emerald';
                             const fullAddress = unit.address || (unit.slug.includes('veracruz') ? contactAddressVeracruz : contactAddressSalvador);
                             const cleanPhone = (unit.phone || contactPhone).replace(/\D/g, '');
 
                             return (
-                                <Card
-                                    key={unit.id}
-                                    className={`rounded-3xl border-2 transition-all p-6 sm:p-8 bg-card text-card-foreground shadow-2xl flex flex-col justify-between ${isAmber
-                                        ? 'border-[#FFBE00]'
-                                        : isEmerald
-                                            ? 'border-emerald-500'
-                                            : 'border-[#1A4FD6]'
-                                        }`}
-                                >
-                                    <div className="space-y-6">
-                                        {/* Cabeçalho do Polo */}
-                                        <div className="flex items-center justify-between gap-3 pb-4 border-b border-border/80">
-                                            <div className="flex items-center gap-3.5">
-                                                <div
-                                                    className={`flex size-14 items-center justify-center rounded-2xl ${isAmber
-                                                        ? 'bg-[#FFBE00]/20 text-[#0D1640] dark:text-[#FFBE00]'
-                                                        : isEmerald
-                                                            ? 'bg-emerald-500/20 text-emerald-600'
-                                                            : 'bg-[#1A4FD6]/15 text-[#1A4FD6]'
-                                                        }`}
-                                                >
-                                                    {unit.icon === 'Trees' ? (
-                                                        <Trees className="size-7" />
-                                                    ) : (
-                                                        <Building2 className="size-7" />
-                                                    )}
-                                                </div>
-                                                <div>
-                                                    <Badge
-                                                        className={`text-[11px] font-bold mb-1 ${isAmber
-                                                            ? 'bg-[#FFBE00] text-[#0D1640]'
+                                <ScrollReveal key={unit.id} direction="up" delay={unitIdx * 150}>
+                                    <Card
+                                        className={`rounded-3xl border-2 transition-all p-6 sm:p-8 bg-card text-card-foreground shadow-2xl flex flex-col justify-between h-full ${isAmber
+                                            ? 'border-[#FFBE00]'
+                                            : isEmerald
+                                                ? 'border-emerald-500'
+                                                : 'border-[#1A4FD6]'
+                                            }`}
+                                    >
+                                        <div className="space-y-6">
+                                            {/* Cabeçalho do Polo */}
+                                            <div className="flex items-center justify-between gap-3 pb-4 border-b border-border/80">
+                                                <div className="flex items-center gap-3.5">
+                                                    <div
+                                                        className={`flex size-14 items-center justify-center rounded-2xl ${isAmber
+                                                            ? 'bg-[#FFBE00]/20 text-[#0D1640] dark:text-[#FFBE00]'
                                                             : isEmerald
-                                                                ? 'bg-emerald-600 text-white'
-                                                                : 'bg-[#1A4FD6] text-white'
+                                                                ? 'bg-emerald-500/20 text-emerald-600'
+                                                                : 'bg-[#1A4FD6]/15 text-[#1A4FD6]'
                                                             }`}
                                                     >
-                                                        {unit.badge || 'Polo Oficial'}
-                                                    </Badge>
-                                                    <h3 className="font-display text-2xl font-bold text-foreground">
-                                                        {unit.name}
-                                                    </h3>
-                                                    <p className="text-xs text-muted-foreground">
-                                                        {unit.subtitle || `Polo Territorial ${unit.slug}`}
-                                                    </p>
+                                                        {unit.icon === 'Trees' ? (
+                                                            <Trees className="size-7" />
+                                                        ) : (
+                                                            <Building2 className="size-7" />
+                                                        )}
+                                                    </div>
+                                                    <div>
+                                                        <Badge
+                                                            className={`text-[11px] font-bold mb-1 ${isAmber
+                                                                ? 'bg-[#FFBE00] text-[#0D1640]'
+                                                                : isEmerald
+                                                                    ? 'bg-emerald-600 text-white'
+                                                                    : 'bg-[#1A4FD6] text-white'
+                                                                }`}
+                                                        >
+                                                            {unit.badge || 'Polo Oficial'}
+                                                        </Badge>
+                                                        <h3 className="font-display text-2xl font-bold text-foreground">
+                                                            {unit.name}
+                                                        </h3>
+                                                        <p className="text-xs text-muted-foreground">
+                                                            {unit.subtitle || `Polo Territorial ${unit.slug}`}
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        {/* Endereço em Destaque */}
-                                        <div className="rounded-2xl bg-secondary/60 p-4 border border-border space-y-3">
-                                            <div className="flex items-start gap-3 text-foreground font-semibold text-sm">
-                                                <MapPin className={`size-5 shrink-0 mt-0.5 ${isAmber ? 'text-amber-600 dark:text-[#FFBE00]' : 'text-[#1A4FD6]'}`} />
-                                                <div>
-                                                    <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-0.5">
-                                                        Endereço de Atendimento & Inscrição Presencial:
+                                            {/* Endereço em Destaque */}
+                                            <div className="rounded-2xl bg-secondary/60 p-4 border border-border space-y-3">
+                                                <div className="flex items-start gap-3 text-foreground font-semibold text-sm">
+                                                    <MapPin className={`size-5 shrink-0 mt-0.5 ${isAmber ? 'text-amber-600 dark:text-[#FFBE00]' : 'text-[#1A4FD6]'}`} />
+                                                    <div>
+                                                        <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground block mb-0.5">
+                                                            Endereço de Atendimento & Inscrição Presencial:
+                                                        </span>
+                                                        <span className="text-base text-foreground font-bold">
+                                                            {fullAddress}
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                                                <div className="flex items-center gap-3 text-xs text-muted-foreground pt-2 border-t border-border/60">
+                                                    <Clock className={`size-4 shrink-0 ${isAmber ? 'text-amber-600 dark:text-[#FFBE00]' : 'text-[#1A4FD6]'}`} />
+                                                    <span className="font-medium text-foreground">
+                                                        {unit.shifts || 'Turnos de Atendimento: Matutino, Vespertino e Noturno'}
                                                     </span>
-                                                    <span className="text-base text-foreground font-bold">
-                                                        {fullAddress}
-                                                    </span>
                                                 </div>
                                             </div>
 
-                                            <div className="flex items-center gap-3 text-xs text-muted-foreground pt-2 border-t border-border/60">
-                                                <Clock className={`size-4 shrink-0 ${isAmber ? 'text-amber-600 dark:text-[#FFBE00]' : 'text-[#1A4FD6]'}`} />
-                                                <span className="font-medium text-foreground">
-                                                    {unit.shifts || 'Turnos de Atendimento: Matutino, Vespertino e Noturno'}
-                                                </span>
+                                            {/* Contatos do Polo */}
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                                                <div className="flex items-center gap-2 text-muted-foreground p-3 rounded-xl bg-muted/40 border border-border/60">
+                                                    <Phone className="size-4 text-primary shrink-0" />
+                                                    <div>
+                                                        <span className="text-[10px] uppercase font-bold text-muted-foreground block">Telefone</span>
+                                                        <span className="font-bold text-foreground">{unit.phone || contactPhone}</span>
+                                                    </div>
+                                                </div>
+
+                                                <div className="flex items-center gap-2 text-muted-foreground p-3 rounded-xl bg-muted/40 border border-border/60">
+                                                    <Mail className="size-4 text-primary shrink-0" />
+                                                    <div className="truncate">
+                                                        <span className="text-[10px] uppercase font-bold text-muted-foreground block">E-mail</span>
+                                                        <span className="font-medium text-foreground truncate block">{unit.email || contactEmail}</span>
+                                                    </div>
+                                                </div>
                                             </div>
+
+                                            {unit.description && (
+                                                <p className="text-xs text-muted-foreground leading-relaxed">
+                                                    {unit.description}
+                                                </p>
+                                            )}
                                         </div>
 
-                                        {/* Contatos do Polo */}
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                                            <div className="flex items-center gap-2 text-muted-foreground p-3 rounded-xl bg-muted/40 border border-border/60">
-                                                <Phone className="size-4 text-primary shrink-0" />
-                                                <div>
-                                                    <span className="text-[10px] uppercase font-bold text-muted-foreground block">Telefone</span>
-                                                    <span className="font-bold text-foreground">{unit.phone || contactPhone}</span>
-                                                </div>
-                                            </div>
+                                        {/* Botões de Ação para o Usuário */}
+                                        <div className="pt-6 mt-6 border-t border-border/80 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                            <a
+                                                href={unit.maps_url && unit.maps_url.trim().length > 0 ? unit.maps_url : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="w-full"
+                                            >
+                                                <Button
+                                                    variant="outline"
+                                                    className="w-full border-primary/30 hover:bg-primary/10 text-primary font-bold text-xs sm:text-sm h-11 gap-2"
+                                                >
+                                                    <MapPin className="size-4" />
+                                                    <span>Traçar Rota no Mapa</span>
+                                                </Button>
+                                            </a>
 
-                                            <div className="flex items-center gap-2 text-muted-foreground p-3 rounded-xl bg-muted/40 border border-border/60">
-                                                <Mail className="size-4 text-primary shrink-0" />
-                                                <div className="truncate">
-                                                    <span className="text-[10px] uppercase font-bold text-muted-foreground block">E-mail</span>
-                                                    <span className="font-medium text-foreground truncate block">{unit.email || contactEmail}</span>
-                                                </div>
-                                            </div>
+                                            <a
+                                                href={`https://wa.me/55${cleanPhone}?text=${encodeURIComponent(`Olá! Gostaria de informações sobre como me inscrever presencialmente no ${unit.name} do CAIS BANTU.`)}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="w-full"
+                                            >
+                                                <Button
+                                                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm h-11 gap-2 shadow-md"
+                                                >
+                                                    <MessageCircle className="size-4" />
+                                                    <span>Tirar Dúvidas no WhatsApp</span>
+                                                </Button>
+                                            </a>
                                         </div>
-
-                                        {unit.description && (
-                                            <p className="text-xs text-muted-foreground leading-relaxed">
-                                                {unit.description}
-                                            </p>
-                                        )}
-                                    </div>
-
-                                    {/* Botões de Ação para o Usuário */}
-                                    <div className="pt-6 mt-6 border-t border-border/80 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                        <a
-                                            href={unit.maps_url && unit.maps_url.trim().length > 0 ? unit.maps_url : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="w-full"
-                                        >
-                                            <Button
-                                                variant="outline"
-                                                className="w-full border-primary/30 hover:bg-primary/10 text-primary font-bold text-xs sm:text-sm h-11 gap-2"
-                                            >
-                                                <MapPin className="size-4" />
-                                                <span>Traçar Rota no Mapa</span>
-                                            </Button>
-                                        </a>
-
-                                        <a
-                                            href={`https://wa.me/55${cleanPhone}?text=${encodeURIComponent(`Olá! Gostaria de informações sobre como me inscrever presencialmente no ${unit.name} do CAIS BANTU.`)}`}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="w-full"
-                                        >
-                                            <Button
-                                                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm h-11 gap-2 shadow-md"
-                                            >
-                                                <MessageCircle className="size-4" />
-                                                <span>Tirar Dúvidas no WhatsApp</span>
-                                            </Button>
-                                        </a>
-                                    </div>
-                                </Card>
+                                    </Card>
+                                </ScrollReveal>
                             );
                         })}
                     </div>
 
                     {/* Box de Documentação Necessária */}
-                    <div className="mt-12 rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-8 backdrop-blur-md">
-                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-4 mb-4">
-                            <div className="flex items-center gap-3">
-                                <div className="flex size-10 items-center justify-center rounded-xl bg-[#FFBE00] text-[#0D1640] font-bold">
-                                    <Shield className="size-5" />
-                                </div>
-                                <div>
-                                    <h4 className="font-display text-lg font-bold text-white">
-                                        Documentação Necessária para Inscrição no Polo
-                                    </h4>
-                                    <p className="text-xs text-[#9AA5C4]">
-                                        Apresente os documentos abaixo no momento do seu comparecimento presencial
-                                    </p>
+                    <ScrollReveal direction="up" delay={200}>
+                        <div className="mt-12 rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-8 backdrop-blur-md">
+                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-4 mb-4">
+                                <div className="flex items-center gap-3">
+                                    <div className="flex size-10 items-center justify-center rounded-xl bg-[#FFBE00] text-[#0D1640] font-bold">
+                                        <Shield className="size-5" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-display text-lg font-bold text-white">
+                                            Documentação Necessária para Inscrição no Polo
+                                        </h4>
+                                        <p className="text-xs text-[#9AA5C4]">
+                                            Apresente os documentos abaixo no momento do seu comparecimento presencial
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs text-white/90">
-                            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10">
-                                <CheckCircle2 className="size-4 text-emerald-400 shrink-0" />
-                                <span>Documento Oficial com Foto (RG ou CNH)</span>
-                            </div>
-                            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10">
-                                <CheckCircle2 className="size-4 text-emerald-400 shrink-0" />
-                                <span>CPF (Cadastro de Pessoa Física)</span>
-                            </div>
-                            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10">
-                                <CheckCircle2 className="size-4 text-emerald-400 shrink-0" />
-                                <span>Comprovante de Residência Atualizado</span>
-                            </div>
-                            <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10">
-                                <CheckCircle2 className="size-4 text-emerald-400 shrink-0" />
-                                <span>Menores de 18 anos com Responsável</span>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs text-white/90">
+                                <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10">
+                                    <CheckCircle2 className="size-4 text-emerald-400 shrink-0" />
+                                    <span>Documento Oficial com Foto (RG ou CNH)</span>
+                                </div>
+                                <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10">
+                                    <CheckCircle2 className="size-4 text-emerald-400 shrink-0" />
+                                    <span>CPF (Cadastro de Pessoa Física)</span>
+                                </div>
+                                <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10">
+                                    <CheckCircle2 className="size-4 text-emerald-400 shrink-0" />
+                                    <span>Comprovante de Residência Atualizado</span>
+                                </div>
+                                <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/5 border border-white/10">
+                                    <CheckCircle2 className="size-4 text-emerald-400 shrink-0" />
+                                    <span>Menores de 18 anos com Responsável</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </ScrollReveal>
                 </div>
             </section>
 
             {/* 11. EQUIPE & DIRETORIA */}
-            <section id="equipe" className="py-20 bg-[#F2F5FF] dark:bg-[#090F2C]">
+            <section id="equipe" className="py-20 bg-[#F2F5FF] dark:bg-[#090F2C] overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center max-w-3xl mx-auto space-y-4">
+                    <ScrollReveal direction="up" className="text-center max-w-3xl mx-auto space-y-4">
                         <Badge variant="outline" className="border-[#1A4FD6]/30 bg-[#1A4FD6]/10 text-[#1A4FD6] dark:text-[#9AA5C4]">
                             Corpo Técnico & Gestão
                         </Badge>
@@ -1299,45 +1322,47 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                         <p className="text-muted-foreground text-base sm:text-lg">
                             Profissionais qualificados, psicólogas, assistentes sociais e mestres comprometidos com a emancipação e acolhimento dos participantes.
                         </p>
-                    </div>
+                    </ScrollReveal>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-12">
-                        {team.map((member: any) => {
+                        {team.map((member: any, memberIdx: number) => {
                             const photoSrc = member.photo_url || (member.photo ? (member.photo.startsWith('http') || member.photo.startsWith('/') ? member.photo : `/storage/${member.photo}`) : null);
 
                             return (
-                                <Card key={member.id} className="rounded-3xl hover:border-primary/50 transition-all text-center p-6 space-y-4 flex flex-col justify-between">
-                                    <div className="space-y-3">
-                                        <div className="flex size-16 mx-auto items-center justify-center rounded-full bg-[#1A4FD6] font-display text-xl font-bold text-white shadow-md overflow-hidden ring-2 ring-[#1A4FD6]/20">
-                                            {photoSrc ? (
-                                                <img
-                                                    src={photoSrc}
-                                                    alt={member.name}
-                                                    className="size-full object-cover rounded-full"
-                                                    onError={(e) => {
-                                                        e.currentTarget.style.display = 'none';
-                                                        const fallback = e.currentTarget.parentElement?.querySelector('.avatar-fallback');
-                                                        if (fallback) (fallback as HTMLElement).style.display = 'flex';
-                                                    }}
-                                                />
-                                            ) : null}
-                                            <span className={`avatar-fallback ${photoSrc ? 'hidden' : 'flex'} items-center justify-center size-full`}>
-                                                {member.name.charAt(0)}
-                                            </span>
+                                <ScrollReveal key={member.id} direction="up" delay={memberIdx * 100}>
+                                    <Card className="rounded-3xl hover:border-primary/50 transition-all text-center p-6 space-y-4 flex flex-col justify-between h-full">
+                                        <div className="space-y-3">
+                                            <div className="flex size-16 mx-auto items-center justify-center rounded-full bg-[#1A4FD6] font-display text-xl font-bold text-white shadow-md overflow-hidden ring-2 ring-[#1A4FD6]/20">
+                                                {photoSrc ? (
+                                                    <img
+                                                        src={photoSrc}
+                                                        alt={member.name}
+                                                        className="size-full object-cover rounded-full"
+                                                        onError={(e) => {
+                                                            e.currentTarget.style.display = 'none';
+                                                            const fallback = e.currentTarget.parentElement?.querySelector('.avatar-fallback');
+                                                            if (fallback) (fallback as HTMLElement).style.display = 'flex';
+                                                        }}
+                                                    />
+                                                ) : null}
+                                                <span className={`avatar-fallback ${photoSrc ? 'hidden' : 'flex'} items-center justify-center size-full`}>
+                                                    {member.name.charAt(0)}
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <h3 className="font-display text-base font-bold text-foreground leading-snug">
+                                                    {member.name}
+                                                </h3>
+                                                <Badge variant="outline" className="text-[11px] mt-1 text-primary border-primary/20">
+                                                    {member.role}
+                                                </Badge>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <h3 className="font-display text-base font-bold text-foreground leading-snug">
-                                                {member.name}
-                                            </h3>
-                                            <Badge variant="outline" className="text-[11px] mt-1 text-primary border-primary/20">
-                                                {member.role}
-                                            </Badge>
-                                        </div>
-                                    </div>
-                                    <p className="text-xs text-muted-foreground leading-relaxed">
-                                        {member.description}
-                                    </p>
-                                </Card>
+                                        <p className="text-xs text-muted-foreground leading-relaxed">
+                                            {member.description}
+                                        </p>
+                                    </Card>
+                                </ScrollReveal>
                             );
                         })}
                     </div>
@@ -1345,9 +1370,9 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
             </section>
 
             {/* 12. NOTÍCIAS, EDITAIS & HISTÓRIAS */}
-            <section id="noticias" className="py-20 bg-white dark:bg-[#0D1640]">
+            <section id="noticias" className="py-20 bg-white dark:bg-[#0D1640] overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-border/80 pb-6">
+                    <ScrollReveal direction="up" className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-border/80 pb-6">
                         <div className="space-y-2">
                             <Badge className="bg-[#FFBE00] text-[#0D1640] font-bold">
                                 Informação & Transparência
@@ -1359,97 +1384,107 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                         <span className="text-xs text-muted-foreground">
                             Acompanhe o cronograma e eventos do CAIS BANTU
                         </span>
-                    </div>
+                    </ScrollReveal>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                        {news.map((item) => (
-                            <Card key={item.id} className="rounded-3xl hover:border-primary/50 transition-all hover:shadow-md flex flex-col justify-between">
-                                <CardHeader className="space-y-2">
-                                    <div className="flex items-center justify-between text-xs text-muted-foreground">
-                                        <Badge variant="outline" className="text-[11px] font-semibold">
-                                            {item.category}
-                                        </Badge>
-                                        <span>{item.date_label}</span>
-                                    </div>
-                                    <CardTitle className="text-lg leading-snug pt-2 font-bold text-foreground">
-                                        {item.title}
-                                    </CardTitle>
-                                    <CardDescription className="text-sm leading-relaxed">
-                                        {item.description}
-                                    </CardDescription>
-                                </CardHeader>
-                                <CardContent className="pt-0">
-                                    <Button
-                                        type="button"
-                                        variant="link"
-                                        onClick={() => handleOpenNews(item)}
-                                        className="px-0 text-[#1A4FD6] dark:text-[#FFBE00] font-bold text-xs gap-1 hover:underline cursor-pointer"
-                                    >
-                                        Ler matéria completa &rarr;
-                                    </Button>
-                                </CardContent>
-                            </Card>
+                        {news.map((item, itemIdx) => (
+                            <ScrollReveal key={item.id} direction="up" delay={itemIdx * 150}>
+                                <Card className="rounded-3xl hover:border-primary/50 transition-all hover:shadow-md flex flex-col justify-between h-full">
+                                    <CardHeader className="space-y-2">
+                                        <div className="flex items-center justify-between text-xs text-muted-foreground">
+                                            <Badge variant="outline" className="text-[11px] font-semibold">
+                                                {item.category}
+                                            </Badge>
+                                            <span>{item.date_label}</span>
+                                        </div>
+                                        <CardTitle className="text-lg leading-snug pt-2 font-bold text-foreground">
+                                            {item.title}
+                                        </CardTitle>
+                                        <CardDescription className="text-sm leading-relaxed">
+                                            {item.description}
+                                        </CardDescription>
+                                    </CardHeader>
+                                    <CardContent className="pt-0">
+                                        <Button
+                                            type="button"
+                                            variant="link"
+                                            onClick={() => handleOpenNews(item)}
+                                            className="px-0 text-[#1A4FD6] dark:text-[#FFBE00] font-bold text-xs gap-1 hover:underline cursor-pointer"
+                                        >
+                                            Ler matéria completa &rarr;
+                                        </Button>
+                                    </CardContent>
+                                </Card>
+                            </ScrollReveal>
                         ))}
                     </div>
                 </div>
             </section>
 
             {/* 13. PARCEIROS & FINANCIADORES */}
-            <section className="py-16 bg-[#F2F5FF] dark:bg-[#090F2C] border-y border-border/80">
+            <section className="py-16 bg-[#F2F5FF] dark:bg-[#090F2C] border-y border-border/80 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-                    <div className="text-center space-y-2">
+                    <ScrollReveal direction="up" className="text-center space-y-2">
                         <Badge variant="outline" className="border-[#1A4FD6]/30 bg-[#1A4FD6]/10 text-[#1A4FD6] dark:text-[#9AA5C4]">
                             Parcerias & Cooperação
                         </Badge>
                         <h3 className="font-display text-2xl font-bold text-foreground">
                             Rede de Apoio, Financiamento e Articulação Territorial
                         </h3>
-                    </div>
+                    </ScrollReveal>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <Card className="p-5 rounded-2xl bg-card border-border/80 hover:border-primary/40 transition-all text-left space-y-2">
-                            <h4 className="font-display font-bold text-base text-foreground leading-snug">
-                                SENAD / Ministério da Justiça e Segurança Pública
-                            </h4>
-                            <p className="text-xs text-muted-foreground leading-relaxed">
-                                Órgão concedente e financiador da parceria CAIS.
-                            </p>
-                        </Card>
+                        <ScrollReveal direction="up" delay={50}>
+                            <Card className="p-5 rounded-2xl bg-card border-border/80 hover:border-primary/40 transition-all text-left space-y-2 h-full">
+                                <h4 className="font-display font-bold text-base text-foreground leading-snug">
+                                    SENAD / Ministério da Justiça e Segurança Pública
+                                </h4>
+                                <p className="text-xs text-muted-foreground leading-relaxed">
+                                    Órgão concedente e financiador da parceria CAIS.
+                                </p>
+                            </Card>
+                        </ScrollReveal>
 
-                        <Card className="p-5 rounded-2xl bg-card border-border/80 hover:border-primary/40 transition-all text-left space-y-2">
-                            <h4 className="font-display font-bold text-base text-foreground leading-snug">
-                                Associação Comunitária de Matarandiba
-                            </h4>
-                            <p className="text-xs text-muted-foreground leading-relaxed">
-                                Parceria comunitária e territorial em Vera Cruz.
-                            </p>
-                        </Card>
+                        <ScrollReveal direction="up" delay={150}>
+                            <Card className="p-5 rounded-2xl bg-card border-border/80 hover:border-primary/40 transition-all text-left space-y-2 h-full">
+                                <h4 className="font-display font-bold text-base text-foreground leading-snug">
+                                    Associação Comunitária de Matarandiba
+                                </h4>
+                                <p className="text-xs text-muted-foreground leading-relaxed">
+                                    Parceria comunitária e territorial em Vera Cruz.
+                                </p>
+                            </Card>
+                        </ScrollReveal>
 
-                        <Card className="p-5 rounded-2xl bg-card border-border/80 hover:border-primary/40 transition-all text-left space-y-2">
-                            <h4 className="font-display font-bold text-base text-foreground leading-snug">
-                                Maré de Março
-                            </h4>
-                            <p className="text-xs text-muted-foreground leading-relaxed">
-                                Rede cultural parceira no território de Itaparica.
-                            </p>
-                        </Card>
+                        <ScrollReveal direction="up" delay={250}>
+                            <Card className="p-5 rounded-2xl bg-card border-border/80 hover:border-primary/40 transition-all text-left space-y-2 h-full">
+                                <h4 className="font-display font-bold text-base text-foreground leading-snug">
+                                    Maré de Março
+                                </h4>
+                                <p className="text-xs text-muted-foreground leading-relaxed">
+                                    Rede cultural parceira no território de Itaparica.
+                                </p>
+                            </Card>
+                        </ScrollReveal>
 
-                        <Card className="p-5 rounded-2xl bg-card border-border/80 hover:border-primary/40 transition-all text-left space-y-2">
-                            <h4 className="font-display font-bold text-base text-foreground leading-snug">
-                                Instituto Entre Aspas
-                            </h4>
-                            <p className="text-xs text-muted-foreground leading-relaxed">
-                                Instituição parceira na articulação territorial em Salvador.
-                            </p>
-                        </Card>
+                        <ScrollReveal direction="up" delay={350}>
+                            <Card className="p-5 rounded-2xl bg-card border-border/80 hover:border-primary/40 transition-all text-left space-y-2 h-full">
+                                <h4 className="font-display font-bold text-base text-foreground leading-snug">
+                                    Instituto Entre Aspas
+                                </h4>
+                                <p className="text-xs text-muted-foreground leading-relaxed">
+                                    Instituição parceira na articulação territorial em Salvador.
+                                </p>
+                            </Card>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
 
             {/* 14. CONTATO & RODAPÉ */}
-            <footer id="contato" className="bg-[#0D1640] text-white pt-20 pb-12 border-t border-white/10">
+            <footer id="contato" className="bg-[#0D1640] text-white pt-20 pb-12 border-t border-white/10 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+                    <ScrollReveal direction="up" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
                         {/* Coluna 1: Logo & Sobre */}
                         <div className="space-y-4">
                             <div className="flex items-center gap-3">
@@ -1532,7 +1567,7 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </ScrollReveal>
 
                     {/* Bottom Bar */}
                     <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#9AA5C4] gap-4">
