@@ -22,4 +22,21 @@ class CaisTeamMember extends Model
         'active' => 'boolean',
         'order' => 'integer',
     ];
+
+    protected $appends = [
+        'photo_url',
+    ];
+
+    public function getPhotoUrlAttribute(): ?string
+    {
+        if (!$this->photo) {
+            return null;
+        }
+
+        if (str_starts_with($this->photo, 'http') || str_starts_with($this->photo, '/')) {
+            return $this->photo;
+        }
+
+        return \Illuminate\Support\Facades\Storage::url($this->photo);
+    }
 }

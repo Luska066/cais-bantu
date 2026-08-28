@@ -93,7 +93,7 @@ const defaultCourses = [
     {
         id: 3,
         slug: 'produtor-audiovisual',
-        title: 'Produtor(a) Audiovisual',
+        title: 'Produção Audiovisual',
         category: 'Comunicação & Mídias',
         icon: 'Video',
         hours: '160 Horas',
@@ -164,7 +164,7 @@ As inscrições podem ser realizadas diretamente através do formulário nesta p
 
 Coordenado por mestres de capoeira e psicólogas especializadas em relações étnico-raciais, o projeto utiliza a roda de capoeira como espaço seguro de acolhimento, escuta mútua, disciplina coletiva e reconstrução da auto-estima diante dos impactos do racismo estrutural.
 
-"A capoeira nos ensina a gingar com os desafios da vida, a ter calma no jogo e a cuidar de quem está ao nosso lado", destaca Mestre Bantu, diretor geral do instituto. Estudos e relatórios psicossociais do projeto apontam uma redução significativa nos níveis de ansiedade e isolamento social entre os educandos participantes das rodas integradas.`,
+"A capoeira nos ensina a gingar com os desafios da vida, a ter calma no jogo e a cuidar de quem está ao nosso lado", destaca Mestre Roxinho, diretor geral do instituto. Estudos e relatórios psicossociais do projeto apontam uma redução significativa nos níveis de ansiedade e isolamento social entre os educandos participantes das rodas integradas.`,
     },
     {
         id: 3,
@@ -181,10 +181,11 @@ A nova unidade representa um marco histórico para o desenvolvimento sociocultur
 ];
 
 const defaultTeam = [
-    { id: 1, name: 'Mestre Bantu', role: 'Diretor Geral & Fundador', description: 'Educador popular, mestre de Capoeira Angola e ativista dos direitos humanos desde 2006.' },
-    { id: 2, name: 'Dra. Dandara Santos', role: 'Coordenação Psicossocial', description: 'Psicóloga clínica e especialista em relações étnico-raciais e saúde mental comunitária.' },
-    { id: 3, name: 'Prof. Luandino Ferreira', role: 'Coordenação Pedagógica', description: 'Pedagogo e pesquisador em educação afrocentrada e tecnologias sociais.' },
-    { id: 4, name: 'Mariana Nascimento', role: 'Coordenação de Inclusão Produtiva', description: 'Assistente social com foco em empreendedorismo solidário e geração de renda.' },
+    { id: 1, name: 'Edielson Miranda (Mestre Roxinho)', role: 'Diretor Geral & Fundador', description: 'Educador social, gestor social, mestre de Capoeira Angola e ativista dos direitos humanos.' },
+    { id: 2, name: 'Simone Paixão', role: 'Coordenação Psicossocial', description: 'Psicóloga responsável pelo acompanhamento e acolhimento psicossocial dos participantes.' },
+    { id: 3, name: 'David Assunção', role: 'Coordenação Pedagógica', description: 'Responsável pelo acompanhamento e desenvolvimento pedagógico das atividades e participantes.' },
+    { id: 4, name: 'Monique Marques', role: 'Coordenação de Inclusão Produtiva', description: 'Responsável pelas ações voltadas à inclusão produtiva e geração de oportunidades.' },
+    { id: 5, name: 'Elisângela Araújo', role: 'Assistente Social', description: 'Responsável pelo acompanhamento e orientação social dos participantes e famílias.' },
 ];
 
 export type UnitItem = {
@@ -209,12 +210,14 @@ const defaultUnits: UnitItem[] = [
     {
         id: 1,
         slug: 'salvador',
-        name: 'Unidade Salvador',
-        subtitle: 'Polo Capital • Centro Histórico & Periferias',
-        badge: '5 Turmas',
+        name: 'UNIDADE SALVADOR',
+        subtitle: 'ICBANTU – Núcleo SSA · Polo Capital · Centro Histórico & Periferias',
+        badge: 'Polo Salvador',
         description: 'Foco em Letramento Digital, Produção Audiovisual, Instrutor de Ioga e Empreendedorismo e Artesanato.',
-        address: 'Salvador — BA (Sede do Instituto Cultural Bantu)',
+        address: 'Rua Mello Moraes Filho, nº 392 – Fazenda Grande do Retiro, Salvador – BA',
         shifts: 'Turnos: Matutino, Vespertino e Noturno',
+        phone: '(71) 99642-8078',
+        email: 'bantu-contato@institutobantu.org',
         icon: 'Building2',
         color_theme: 'blue',
         active: true,
@@ -223,12 +226,14 @@ const defaultUnits: UnitItem[] = [
     {
         id: 2,
         slug: 'veracruz',
-        name: 'Unidade Vera Cruz',
-        subtitle: 'Polo Ilha de Itaparica • Litoral & Comunidades',
-        badge: '5 Turmas',
+        name: 'UNIDADE VERA CRUZ',
+        subtitle: 'Casa Bantu Vila Rosa · Polo Ilha de Itaparica · Litoral & Comunidades',
+        badge: 'Polo Vera Cruz',
         description: 'Foco em Agente Ambiental, Artesanato Sustentável, Letramento Digital e turismo de base comunitária.',
-        address: 'Vera Cruz — Ilha de Itaparica — BA',
+        address: 'Rua do Congo, nº 25 – Loteamento Parque das Mangueiras, Vera Cruz – BA | CEP: 44470-000',
         shifts: 'Turnos: Matutino e Vespertino',
+        phone: '(71) 99225-4706',
+        email: 'bantu-contato@institutobantu.org',
         icon: 'Trees',
         color_theme: 'amber',
         active: true,
@@ -284,17 +289,17 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
     const heroBadge = settings.hero_badge || 'Centro de Acesso a Direitos e Inclusão Social Afrocentrado';
     const heroTitle = settings.hero_title || 'CAIS BANTU';
     const heroSubtitle = settings.hero_subtitle || 'Acolher, qualificar e gerar oportunidades para fortalecer a autonomia, a cidadania e a inclusão social.';
-    const heroDescription = settings.hero_description || 'Uma iniciativa transformadora do Instituto Cultural Bantu voltada às populações em vulnerabilidade social em Salvador, Vera Cruz e Ilha de Itaparica. Formação profissional gratuita, acolhimento psicossocial e tecnologia social afrocentrada.';
+    const heroDescription = settings.hero_description || 'Uma iniciativa do Instituto Cultural Bantu, realizada em parceria com a SENAD/MJSP, voltada à promoção do acesso a direitos, da inclusão social e produtiva e da autonomia. Formação profissional gratuita, acolhimento psicossocial e tecnologia social afrocentrada.';
 
     const metaBeneficiaries = settings.meta_beneficiaries || '300';
     const metaClasses = settings.meta_classes || '10';
     const metaHours = settings.meta_hours || '160h';
     const metaUnits = settings.meta_units || `${displayUnits.length} Polos`;
 
-    const contactPhone = settings.contact_phone || '(71) 98845-2006';
-    const contactEmail = settings.contact_email || 'contato@institutobantu.org.br';
-    const contactAddressSalvador = settings.contact_address_salvador || 'Salvador — BA (Sede do Instituto Cultural Bantu)';
-    const contactAddressVeracruz = settings.contact_address_veracruz || 'Vera Cruz — Ilha de Itaparica — BA';
+    const contactPhone = settings.contact_phone || '(71) 99225-4706';
+    const contactEmail = settings.contact_email || 'bantu-contato@institutobantu.org';
+    const contactAddressSalvador = settings.contact_address_salvador || 'Rua Mello Moraes Filho, nº 392 – Fazenda Grande do Retiro, Salvador – BA';
+    const contactAddressVeracruz = settings.contact_address_veracruz || 'Rua do Congo, nº 25 – Loteamento Parque das Mangueiras, Vera Cruz – BA | CEP: 44470-000';
 
     // Criteria (#publico)
     const criteriaBadge = settings.criteria_badge || 'Critérios & Acesso';
@@ -530,9 +535,20 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                 O que é o CAIS BANTU?
                             </h2>
 
-                            <p className="text-muted-foreground leading-relaxed text-base sm:text-lg">
-                                O <strong>CAIS BANTU</strong> é um projeto do <strong>Instituto Cultural Bantu</strong> concebido como um centro integrador que une <strong>acolhimento psicossocial humanizado</strong>, <strong>qualificação profissional qualificada</strong> e <strong>inclusão produtiva</strong> por meio de uma metodologia genuinamente afrocentrada e emancipatória.
-                            </p>
+                            <div className="space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
+                                <p>
+                                    O <strong>CAIS BANTU</strong> é um projeto do <strong>Instituto Cultural Bantu</strong>, realizado em parceria com a <strong>Secretaria Nacional de Políticas sobre Drogas e Gestão de Ativos (SENAD)</strong>, do <strong>Ministério da Justiça e Segurança Pública (MJSP)</strong>, concebido como um centro integrador de promoção e defesa de direitos humanos, acolhimento, inclusão social e produtiva.
+                                </p>
+                                <p>
+                                    A iniciativa implementa duas unidades dos <strong>Centros de Acesso a Direitos e Inclusão Social na Política sobre Drogas — CAIS</strong>, destinadas prioritariamente a pessoas em situação de vulnerabilidade social, especialmente aquelas com demandas relacionadas ao uso de álcool e outras drogas.
+                                </p>
+                                <p>
+                                    Por meio do acesso a direitos, da integração à rede de serviços públicos, da qualificação profissional, do acolhimento psicossocial e da inclusão socioprodutiva, o CAIS BANTU busca promover autonomia, cidadania, reabilitação psicossocial, reinserção social e redução de danos.
+                                </p>
+                                <p>
+                                    Em Salvador e Vera Cruz, o projeto articula essa atuação à <strong>tecnologia social afrocentrada</strong> desenvolvida pelo Instituto Cultural Bantu, baseada na Capoeira Angola, no cuidado comunitário, na promoção da autonomia e no fortalecimento das pessoas e dos territórios.
+                                </p>
+                            </div>
 
                             <div className="space-y-4 pt-2">
                                 <div className="flex items-start gap-3.5">
@@ -541,7 +557,7 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-foreground text-base">Acolhimento Integral e Escuta</h3>
-                                        <p className="text-sm text-muted-foreground mt-0.5">Suporte psicológico, assistência social e orientação jurídica de direitos humanos.</p>
+                                        <p className="text-sm text-muted-foreground mt-0.5">Suporte psicológico, assistência social e orientação para o acesso a direitos.</p>
                                     </div>
                                 </div>
 
@@ -551,7 +567,7 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-foreground text-base">Capacitação Técnica & Cidadã</h3>
-                                        <p className="text-sm text-muted-foreground mt-0.5">Cursos práticos alinhados com o potencial econômico e sustentável do território baiano.</p>
+                                        <p className="text-sm text-muted-foreground mt-0.5">Cursos práticos voltados à qualificação profissional, à inclusão produtiva e à geração de autonomia.</p>
                                     </div>
                                 </div>
 
@@ -561,7 +577,7 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-foreground text-base">Tecnologia Social da Capoeira Angola</h3>
-                                        <p className="text-sm text-muted-foreground mt-0.5">Ancestralidade, disciplina corporal, respeito comunitário e saúde integral.</p>
+                                        <p className="text-sm text-muted-foreground mt-0.5">Ancestralidade, educação comunitária, disciplina corporal e fortalecimento da autonomia e dos vínculos sociais.</p>
                                     </div>
                                 </div>
                             </div>
@@ -592,14 +608,14 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                 </CardHeader>
                                 <CardContent className="p-0 space-y-4 text-muted-foreground text-sm leading-relaxed">
                                     <p>
-                                        Desde 2006, o <strong>Instituto Cultural Bantu</strong> dedica-se incansavelmente à defesa dos direitos humanos, à promoção da educação popular, à difusão da cultura afro-brasileira, ao empreendedorismo social e ao desenvolvimento comunitário integrado na Bahia.
+                                        Desde 2006, o <strong>Instituto Cultural Bantu</strong> atua na promoção e defesa dos direitos humanos, na valorização da cultura afro-brasileira, na educação popular, no empreendedorismo social e no desenvolvimento comunitário na Bahia.
                                     </p>
                                     <div className="rounded-2xl bg-muted p-4 border border-border/80 space-y-2">
                                         <span className="font-bold text-foreground text-xs uppercase tracking-wider block">
                                             Missão Institucional
                                         </span>
                                         <p className="text-xs text-muted-foreground">
-                                            Promover a dignidade humana, a justiça social e a equidade racial por meio da cultura ancestral, da formação cidadã e de tecnologias sociais comunitárias.
+                                            Desenvolver capacidades socioculturais, econômicas e educacionais a partir de uma perspectiva: afrocentrada, comunitária e transformadora, combatendo as desigualdades estruturais.
                                         </p>
                                     </div>
                                     <div className="grid grid-cols-2 gap-3 pt-2">
@@ -630,7 +646,7 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                             Por que o CAIS BANTU?
                         </h2>
                         <p className="text-[#9AA5C4] text-base sm:text-lg leading-relaxed">
-                            O projeto nasce como uma resposta estratégica e urgente às profundas desigualdades sociais, raciais e econômicas vivenciadas nos territórios de <strong>Salvador</strong>, <strong>Vera Cruz</strong> e <strong>Ilha de Itaparica</strong>.
+                            O projeto nasce como uma resposta às desigualdades sociais, raciais e econômicas vivenciadas nos territórios de <strong>Salvador</strong>, <strong>Vera Cruz</strong> e <strong>Ilha de Itaparica</strong>, promovendo acesso a direitos, inclusão social e produtiva e fortalecimento da autonomia.
                         </p>
                     </div>
 
@@ -641,7 +657,7 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                             </div>
                             <h3 className="font-display text-xl font-bold text-white">Superação de Desigualdades</h3>
                             <p className="text-sm text-[#9AA5C4] leading-relaxed">
-                                Oferecer caminhos concretos de emancipação social para jovens e famílias em áreas de vulnerabilidade extrema.
+                                Ampliar o acesso a direitos, oportunidades e serviços para pessoas em situação de vulnerabilidade social.
                             </p>
                         </div>
 
@@ -649,9 +665,9 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                             <div className="flex size-12 items-center justify-center rounded-xl bg-[#FFBE00] text-[#0D1640] font-bold text-xl">
                                 02
                             </div>
-                            <h3 className="font-display text-xl font-bold text-white">Geração de Renda Real</h3>
+                            <h3 className="font-display text-xl font-bold text-white">Inclusão Social e Produtiva</h3>
                             <p className="text-sm text-[#9AA5C4] leading-relaxed">
-                                Qualificar para profissões em ascensão na economia criativa, digital, ambiental e de serviços locais.
+                                Promover qualificação, autonomia e oportunidades de inclusão produtiva, trabalho decente e desenvolvimento socioeconômico.
                             </p>
                         </div>
 
@@ -661,7 +677,7 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                             </div>
                             <h3 className="font-display text-xl font-bold text-white">Fortalecimento Comunitário</h3>
                             <p className="text-sm text-[#9AA5C4] leading-relaxed">
-                                Reintegrar a comunidade com apoio psicossocial, auto-estima ancestral e redes de cooperação solidária.
+                                Fortalecer vínculos comunitários, redes de cooperação, cuidado psicossocial e estratégias de autonomia nos territórios atendidos.
                             </p>
                         </div>
                     </div>
@@ -1068,7 +1084,7 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                 Escolha o Polo Territorial
                             </h3>
                             <p className="text-xs sm:text-sm text-[#9AA5C4] leading-relaxed">
-                                Escolha entre a <strong>Unidade Salvador</strong> (Centro Histórico) ou a <strong>Unidade Vera Cruz</strong> (Ilha de Itaparica).
+                                Escolha a unidade mais próxima: <strong>Salvador – Núcleo SSA</strong> ou <strong>Vera Cruz – Casa Bantu Vila Rosa</strong>.
                             </p>
                         </div>
 
@@ -1293,25 +1309,45 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-                        {team.map((member) => (
-                            <Card key={member.id} className="rounded-3xl hover:border-primary/50 transition-all text-center p-6 space-y-4">
-                                <div className="flex size-20 mx-auto items-center justify-center rounded-full bg-[#1A4FD6] font-display text-2xl font-bold text-white shadow-md">
-                                    {member.name.charAt(0)}
-                                </div>
-                                <div>
-                                    <h3 className="font-display text-lg font-bold text-foreground">
-                                        {member.name}
-                                    </h3>
-                                    <Badge variant="outline" className="text-xs mt-1 text-primary border-primary/20">
-                                        {member.role}
-                                    </Badge>
-                                </div>
-                                <p className="text-xs text-muted-foreground leading-relaxed">
-                                    {member.description}
-                                </p>
-                            </Card>
-                        ))}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-12">
+                        {team.map((member: any) => {
+                            const photoSrc = member.photo_url || (member.photo ? (member.photo.startsWith('http') || member.photo.startsWith('/') ? member.photo : `/storage/${member.photo}`) : null);
+
+                            return (
+                                <Card key={member.id} className="rounded-3xl hover:border-primary/50 transition-all text-center p-6 space-y-4 flex flex-col justify-between">
+                                    <div className="space-y-3">
+                                        <div className="flex size-16 mx-auto items-center justify-center rounded-full bg-[#1A4FD6] font-display text-xl font-bold text-white shadow-md overflow-hidden ring-2 ring-[#1A4FD6]/20">
+                                            {photoSrc ? (
+                                                <img
+                                                    src={photoSrc}
+                                                    alt={member.name}
+                                                    className="size-full object-cover rounded-full"
+                                                    onError={(e) => {
+                                                        e.currentTarget.style.display = 'none';
+                                                        const fallback = e.currentTarget.parentElement?.querySelector('.avatar-fallback');
+                                                        if (fallback) (fallback as HTMLElement).style.display = 'flex';
+                                                    }}
+                                                />
+                                            ) : null}
+                                            <span className={`avatar-fallback ${photoSrc ? 'hidden' : 'flex'} items-center justify-center size-full`}>
+                                                {member.name.charAt(0)}
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h3 className="font-display text-base font-bold text-foreground leading-snug">
+                                                {member.name}
+                                            </h3>
+                                            <Badge variant="outline" className="text-[11px] mt-1 text-primary border-primary/20">
+                                                {member.role}
+                                            </Badge>
+                                        </div>
+                                    </div>
+                                    <p className="text-xs text-muted-foreground leading-relaxed">
+                                        {member.description}
+                                    </p>
+                                </Card>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
@@ -1368,15 +1404,52 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
 
             {/* 13. PARCEIROS & FINANCIADORES */}
             <section className="py-16 bg-[#F2F5FF] dark:bg-[#090F2C] border-y border-border/80">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-                    <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
-                        Rede de Apoio, Financiamento e Cooperação Institucional
-                    </span>
-                    <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 opacity-80">
-                        <div className="font-display font-bold text-lg text-foreground/70">Instituto Cultural Bantu</div>
-                        <div className="font-display font-bold text-lg text-foreground/70">Secretarias de Inclusão & Trabalho</div>
-                        <div className="font-display font-bold text-lg text-foreground/70">Coletivos Culturais de Salvador</div>
-                        <div className="font-display font-bold text-lg text-foreground/70">Associações Comunitárias de Vera Cruz</div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                    <div className="text-center space-y-2">
+                        <Badge variant="outline" className="border-[#1A4FD6]/30 bg-[#1A4FD6]/10 text-[#1A4FD6] dark:text-[#9AA5C4]">
+                            Parcerias & Cooperação
+                        </Badge>
+                        <h3 className="font-display text-2xl font-bold text-foreground">
+                            Rede de Apoio, Financiamento e Articulação Territorial
+                        </h3>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <Card className="p-5 rounded-2xl bg-card border-border/80 hover:border-primary/40 transition-all text-left space-y-2">
+                            <h4 className="font-display font-bold text-base text-foreground leading-snug">
+                                SENAD / Ministério da Justiça e Segurança Pública
+                            </h4>
+                            <p className="text-xs text-muted-foreground leading-relaxed">
+                                Órgão concedente e financiador da parceria CAIS.
+                            </p>
+                        </Card>
+
+                        <Card className="p-5 rounded-2xl bg-card border-border/80 hover:border-primary/40 transition-all text-left space-y-2">
+                            <h4 className="font-display font-bold text-base text-foreground leading-snug">
+                                Associação Comunitária de Matarandiba
+                            </h4>
+                            <p className="text-xs text-muted-foreground leading-relaxed">
+                                Parceria comunitária e territorial em Vera Cruz.
+                            </p>
+                        </Card>
+
+                        <Card className="p-5 rounded-2xl bg-card border-border/80 hover:border-primary/40 transition-all text-left space-y-2">
+                            <h4 className="font-display font-bold text-base text-foreground leading-snug">
+                                Maré de Março
+                            </h4>
+                            <p className="text-xs text-muted-foreground leading-relaxed">
+                                Rede cultural parceira no território de Itaparica.
+                            </p>
+                        </Card>
+
+                        <Card className="p-5 rounded-2xl bg-card border-border/80 hover:border-primary/40 transition-all text-left space-y-2">
+                            <h4 className="font-display font-bold text-base text-foreground leading-snug">
+                                Instituto Entre Aspas
+                            </h4>
+                            <p className="text-xs text-muted-foreground leading-relaxed">
+                                Instituição parceira na articulação territorial em Salvador.
+                            </p>
+                        </Card>
                     </div>
                 </div>
             </section>
@@ -1422,7 +1495,7 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                 <li><a href="#cursos" className="hover:text-white transition-colors">Cursos Oferecidos</a></li>
                                 <li><a href="#metodologia" className="hover:text-white transition-colors">Metodologia Afrocentrada</a></li>
                                 <li><a href="#publico" className="hover:text-white transition-colors">Quem Pode Participar</a></li>
-                                <li><a href="#unidades" className="hover:text-white transition-colors">Polos Territoriais</a></li>
+                                <li><a href="#unidades" className="hover:text-white transition-colors">Unidades de Atendimento</a></li>
                             </ul>
                         </div>
 
@@ -1432,9 +1505,11 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                 Cursos 2026
                             </h4>
                             <ul className="space-y-2 text-xs text-[#9AA5C4]">
-                                {courses.map((c) => (
-                                    <li key={c.id}>{c.title}</li>
-                                ))}
+                                <li>Letramento Digital</li>
+                                <li>Empreendedorismo e Artesanato</li>
+                                <li>Produção Audiovisual</li>
+                                <li>Instrutor(a) de Ioga</li>
+                                <li>Agente Ambiental</li>
                             </ul>
                         </div>
 
@@ -1446,7 +1521,7 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                             <div className="space-y-2 text-xs text-[#9AA5C4]">
                                 <div className="flex items-center gap-2">
                                     <Phone className="size-4 text-[#FFBE00]" />
-                                    <span>{contactPhone}</span>
+                                    <span>(71) 99225-4706 | (71) 99642-8078</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Mail className="size-4 text-[#FFBE00]" />
@@ -1454,13 +1529,13 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <MapPin className="size-4 text-[#FFBE00]" />
-                                    <span>Salvador e Vera Cruz / BA</span>
+                                    <span>Salvador – BA e Vera Cruz – Ilha de Itaparica – BA</span>
                                 </div>
                             </div>
                             <div className="pt-2">
                                 <a href="#inscricoes">
                                     <Button variant="accent" size="sm" className="w-full bg-[#FFBE00] text-[#0D1640] font-bold hover:bg-[#e6ab00]">
-                                        Onde se Inscrever Presencialmente
+                                        📍 Onde se Inscrever Presencialmente
                                     </Button>
                                 </a>
                             </div>

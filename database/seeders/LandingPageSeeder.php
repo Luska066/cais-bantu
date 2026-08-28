@@ -29,7 +29,7 @@ class LandingPageSeeder extends Seeder
             'hero_badge' => 'Centro de Acesso a Direitos e Inclusão Social Afrocentrado',
             'hero_title' => 'CAIS BANTU',
             'hero_subtitle' => 'Acolher, qualificar e gerar oportunidades para fortalecer a autonomia, a cidadania e a inclusão social.',
-            'hero_description' => 'Uma iniciativa transformadora do Instituto Cultural Bantu voltada às populações em vulnerabilidade social em Salvador, Vera Cruz e Ilha de Itaparica. Formação profissional gratuita, acolhimento psicossocial e tecnologia social afrocentrada.',
+            'hero_description' => 'Uma iniciativa do Instituto Cultural Bantu, realizada em parceria com a SENAD/MJSP, voltada à promoção do acesso a direitos, da inclusão social e produtiva e da autonomia. Formação profissional gratuita, acolhimento psicossocial e tecnologia social afrocentrada.',
 
             // Metas de Impacto
             'meta_beneficiaries' => '300',
@@ -38,11 +38,11 @@ class LandingPageSeeder extends Seeder
             'meta_units' => '2 Polos',
 
             // Contato e Rodapé
-            'contact_phone' => '(71) 98845-2006',
-            'contact_whatsapp' => '(71) 98845-2006',
-            'contact_email' => 'contato@institutobantu.org.br',
-            'contact_address_salvador' => 'Salvador — BA (Sede do Instituto Cultural Bantu)',
-            'contact_address_veracruz' => 'Vera Cruz — Ilha de Itaparica — BA',
+            'contact_phone' => '(71) 99225-4706',
+            'contact_whatsapp' => '(71) 99225-4706',
+            'contact_email' => 'bantu-contato@institutobantu.org',
+            'contact_address_salvador' => 'Rua Mello Moraes Filho, nº 392 – Fazenda Grande do Retiro, Salvador – BA',
+            'contact_address_veracruz' => 'Rua do Congo, nº 25 – Loteamento Parque das Mangueiras, Vera Cruz – BA | CEP: 44470-000',
             'social_instagram' => '@institutobantu',
             'social_facebook' => 'institutobantuoficial',
         ];
@@ -91,7 +91,7 @@ class LandingPageSeeder extends Seeder
             ],
             [
                 'slug' => 'produtor-audiovisual',
-                'title' => 'Produtor(a) Audiovisual',
+                'title' => 'Produção Audiovisual',
                 'category' => 'Comunicação & Mídias',
                 'icon' => 'Video',
                 'hours' => '160 Horas',
@@ -150,74 +150,82 @@ class LandingPageSeeder extends Seeder
         }
 
         // 3. Notícias
-        $news = [
-            [
-                'slug' => 'edital-2026-aberto-300-vagas-gratuitas-cais-bantu',
-                'title' => 'Edital 2026 Aberto: 300 Vagas Gratuitas no CAIS BANTU',
-                'category' => 'Inscrições',
-                'date_label' => '15 de Agosto de 2026',
-                'description' => 'Inscrições abertas para as unidades Salvador e Vera Cruz. Conheça os critérios e garanta sua participação.',
-                'content' => 'O Instituto Cultural Bantu torna público o edital de seleção para as 10 turmas de qualificação profissional...',
-                'published' => true,
-            ],
-            [
-                'slug' => 'capoeira-angola-e-saude-mental',
-                'title' => 'Capoeira Angola e Saúde Mental: O Papel da Ancestralidade',
-                'category' => 'Metodologia',
-                'date_label' => '08 de Agosto de 2026',
-                'description' => 'Artigo sobre como as rodas de Capoeira Angola funcionam como espaço de escuta, corpo e tecnologia social.',
-                'content' => 'A Capoeira Angola transcende a arte marcial tornando-se uma rica tecnologia social comunitária...',
-                'published' => true,
-            ],
-            [
-                'slug' => 'inauguracao-polo-inclusao-digital-itaparica',
-                'title' => 'Inauguração do Polo de Inclusão Digital na Ilha de Itaparica',
-                'category' => 'Unidades',
-                'date_label' => '28 de Julho de 2026',
-                'description' => 'Nova sala multimídia atenderá jovens e pescadores artesanais no município de Vera Cruz.',
-                'content' => 'Com equipamentos de última geração e internet de alta velocidade, a nova unidade atenderá dezenas de famílias...',
-                'published' => true,
-            ],
-        ];
+        // $news = [
+        //     [
+        //         'slug' => 'edital-2026-aberto-300-vagas-gratuitas-cais-bantu',
+        //         'title' => 'Edital 2026 Aberto: 300 Vagas Gratuitas no CAIS BANTU',
+        //         'category' => 'Inscrições',
+        //         'date_label' => '15 de Agosto de 2026',
+        //         'description' => 'Inscrições abertas para as unidades Salvador e Vera Cruz. Conheça os critérios e garanta sua participação.',
+        //         'content' => 'O Instituto Cultural Bantu torna público o edital de seleção para as 10 turmas de qualificação profissional...',
+        //         'published' => true,
+        //     ],
+        //     [
+        //         'slug' => 'capoeira-angola-e-saude-mental',
+        //         'title' => 'Capoeira Angola e Saúde Mental: O Papel da Ancestralidade',
+        //         'category' => 'Metodologia',
+        //         'date_label' => '08 de Agosto de 2026',
+        //         'description' => 'Artigo sobre como as rodas de Capoeira Angola funcionam como espaço de escuta, corpo e tecnologia social.',
+        //         'content' => 'A Capoeira Angola transcende a arte marcial tornando-se uma rica tecnologia social comunitária...',
+        //         'published' => true,
+        //     ],
+        //     [
+        //         'slug' => 'inauguracao-polo-inclusao-digital-itaparica',
+        //         'title' => 'Inauguração do Polo de Inclusão Digital na Ilha de Itaparica',
+        //         'category' => 'Unidades',
+        //         'date_label' => '28 de Julho de 2026',
+        //         'description' => 'Nova sala multimídia atenderá jovens e pescadores artesanais no município de Vera Cruz.',
+        //         'content' => 'Com equipamentos de última geração e internet de alta velocidade, a nova unidade atenderá dezenas de famílias...',
+        //         'published' => true,
+        //     ],
+        // ];
 
         foreach ($news as $n) {
             CaisNews::updateOrCreate(['slug' => $n['slug']], $n);
         }
 
-        // 4. Equipe
+        // 4. Equipe Oficial
+        CaisTeamMember::truncate();
         $team = [
             [
-                'name' => 'Mestre Bantu',
+                'name' => 'Edielson Miranda (Mestre Roxinho)',
                 'role' => 'Diretor Geral & Fundador',
-                'description' => 'Educador popular, mestre de Capoeira Angola e ativista dos direitos humanos desde 2006.',
+                'description' => 'Educador social, gestor social, mestre de Capoeira Angola e ativista dos direitos humanos.',
                 'order' => 1,
                 'active' => true,
             ],
             [
-                'name' => 'Dra. Dandara Santos',
+                'name' => 'Simone Paixão',
                 'role' => 'Coordenação Psicossocial',
-                'description' => 'Psicóloga clínica e especialista em relações étnico-raciais e saúde mental comunitária.',
+                'description' => 'Psicóloga responsável pelo acompanhamento e acolhimento psicossocial dos participantes.',
                 'order' => 2,
                 'active' => true,
             ],
             [
-                'name' => 'Prof. Luandino Ferreira',
+                'name' => 'David Assunção',
                 'role' => 'Coordenação Pedagógica',
-                'description' => 'Pedagogo e pesquisador em educação afrocentrada e tecnologias sociais.',
+                'description' => 'Responsável pelo acompanhamento e desenvolvimento pedagógico das atividades e participantes.',
                 'order' => 3,
                 'active' => true,
             ],
             [
-                'name' => 'Mariana Nascimento',
+                'name' => 'Monique Marques',
                 'role' => 'Coordenação de Inclusão Produtiva',
-                'description' => 'Assistente social com foco em empreendedorismo solidário e geração de renda.',
+                'description' => 'Responsável pelas ações voltadas à inclusão produtiva e geração de oportunidades.',
                 'order' => 4,
+                'active' => true,
+            ],
+            [
+                'name' => 'Elisângela Araújo',
+                'role' => 'Assistente Social',
+                'description' => 'Responsável pelo acompanhamento e orientação social dos participantes e famílias.',
+                'order' => 5,
                 'active' => true,
             ],
         ];
 
         foreach ($team as $member) {
-            CaisTeamMember::updateOrCreate(['name' => $member['name']], $member);
+            CaisTeamMember::create($member);
         }
 
         // 5. Inscrições de Demonstração
@@ -247,7 +255,7 @@ class LandingPageSeeder extends Seeder
                 'email' => 'crislane.silva@exemplo.com',
                 'phone' => '(71) 98344-5566',
                 'unit' => 'salvador',
-                'course' => 'Produtor(a) Audiovisual',
+                'course' => 'Produção Audiovisual',
                 'audience' => 'jovem',
                 'status' => 'matriculado',
                 'notes' => 'Matrícula confirmada na Turma 01 - Noturno.',
@@ -272,15 +280,15 @@ class LandingPageSeeder extends Seeder
         $units = [
             [
                 'slug' => 'salvador',
-                'name' => 'Unidade Salvador',
-                'subtitle' => 'Polo Capital • Centro Histórico & Periferias',
-                'badge' => '5 Turmas',
+                'name' => 'UNIDADE SALVADOR',
+                'subtitle' => 'ICBANTU – Núcleo SSA · Polo Capital · Centro Histórico & Periferias',
+                'badge' => 'Polo Salvador',
                 'description' => 'Foco em Letramento Digital, Produção Audiovisual, Instrutor de Ioga e Empreendedorismo e Artesanato.',
-                'address' => 'Salvador — BA (Sede do Instituto Cultural Bantu)',
-                'maps_url' => 'https://www.google.com/maps/search/?api=1&query=Instituto+Cultural+Bantu+Salvador+BA',
+                'address' => 'Rua Mello Moraes Filho, nº 392 – Fazenda Grande do Retiro, Salvador – BA',
+                'maps_url' => 'https://www.google.com/maps/search/?api=1&query=Rua+Mello+Moraes+Filho+392+Fazenda+Grande+do+Retiro+Salvador+BA',
                 'shifts' => 'Turnos: Matutino, Vespertino e Noturno',
-                'phone' => '(71) 98845-2006',
-                'email' => 'contato@institutobantu.org.br',
+                'phone' => '(71) 99642-8078',
+                'email' => 'bantu-contato@institutobantu.org',
                 'icon' => 'Building2',
                 'color_theme' => 'blue',
                 'active' => true,
@@ -288,15 +296,15 @@ class LandingPageSeeder extends Seeder
             ],
             [
                 'slug' => 'veracruz',
-                'name' => 'Unidade Vera Cruz',
-                'subtitle' => 'Polo Ilha de Itaparica • Litoral & Comunidades',
-                'badge' => '5 Turmas',
+                'name' => 'UNIDADE VERA CRUZ',
+                'subtitle' => 'Casa Bantu Vila Rosa · Polo Ilha de Itaparica · Litoral & Comunidades',
+                'badge' => 'Polo Vera Cruz',
                 'description' => 'Foco em Agente Ambiental, Artesanato Sustentável, Letramento Digital e turismo de base comunitária.',
-                'address' => 'Vera Cruz — Ilha de Itaparica — BA',
-                'maps_url' => 'https://www.google.com/maps/search/?api=1&query=Vera+Cruz+Ilha+de+Itaparica+BA',
+                'address' => 'Rua do Congo, nº 25 – Loteamento Parque das Mangueiras, Vera Cruz – BA | CEP: 44470-000',
+                'maps_url' => 'https://www.google.com/maps/search/?api=1&query=Rua+do+Congo+25+Loteamento+Parque+das+Mangueiras+Vera+Cruz+BA',
                 'shifts' => 'Turnos: Matutino e Vespertino',
-                'phone' => '(71) 98845-2006',
-                'email' => 'contato@institutobantu.org.br',
+                'phone' => '(71) 99225-4706',
+                'email' => 'bantu-contato@institutobantu.org',
                 'icon' => 'Trees',
                 'color_theme' => 'amber',
                 'active' => true,
