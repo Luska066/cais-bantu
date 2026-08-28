@@ -180,9 +180,9 @@ class LandingPageSeeder extends Seeder
         //     ],
         // ];
 
-        foreach ($news as $n) {
-            CaisNews::updateOrCreate(['slug' => $n['slug']], $n);
-        }
+        // foreach ($news as $n) {
+        //     CaisNews::updateOrCreate(['slug' => $n['slug']], $n);
+        // }
 
         // 4. Equipe Oficial
         CaisTeamMember::truncate();
