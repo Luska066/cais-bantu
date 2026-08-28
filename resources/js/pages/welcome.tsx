@@ -333,7 +333,7 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
                     {/* Brand */}
                     <a href="#" className="flex items-center gap-3 group">
-                        <div className="flex aspect-square size-12 items-center justify-center rounded-2xl bg-white/10 p-1 shadow-md group-hover:scale-105 transition-transform overflow-hidden ring-1 ring-white/20">
+                        <div className="flex size-50 items-center justify-center rounded-2xl p-1 group-hover:scale-105 transition-transform overflow-hidden">
                             <img
                                 src="/apple-touch-icon.png"
                                 alt="Logo Instituto Cultural Bantu"
@@ -344,14 +344,6 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                     if (fallback) (fallback as HTMLElement).style.display = 'flex';
                                 }}
                             />
-                        </div>
-                        <div className="flex flex-col text-left">
-                            <span className="font-display font-bold text-base tracking-tight text-white leading-tight">
-                                CAIS BANTU
-                            </span>
-                            <span className="text-[11px] font-medium text-[#8C98B6] leading-tight">
-                                Instituto Cultural Bantu
-                            </span>
                         </div>
                     </a>
 
@@ -587,12 +579,12 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                         <div id="instituto" className="lg:col-span-6">
                             <Card className="border-[#1A4FD6]/20 bg-card shadow-lg rounded-3xl p-6 sm:p-8">
                                 <CardHeader className="p-0 pb-4">
-                                    <div className="flex items-center gap-3">
-                                        <div className="flex aspect-square size-16 items-center justify-center rounded-full bg-[#0D1640] text-[#FFBE00] font-display font-bold text-lg">
+                                    <div className="flex items-center bg-[#0D1640] rounded-md gap-3">
+                                        <div className="flex aspect-square h-20 size-40 items-center justify-center  text-[#FFBE00] font-display font-bold text-lg">
                                             <img
                                                 src="/apple-touch-icon.png"
                                                 alt="Logo Instituto Cultural Bantu"
-                                                className="size-full w-[32px] object-contain rounded-xl"
+                                                className="size-30 object-contain rounded-xl"
                                                 onError={(e) => {
                                                     e.currentTarget.style.display = 'none';
                                                     const fallback = e.currentTarget.parentElement?.querySelector('.fallback-ib');
@@ -601,8 +593,8 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                             />
                                         </div>
                                         <div>
-                                            <CardTitle className="text-xl">Instituto Cultural Bantu</CardTitle>
-                                            <CardDescription>Organização da Sociedade Civil (OSC) fundada em 2006</CardDescription>
+                                            <CardTitle className="text-xl text-white">Instituto Cultural Bantu</CardTitle>
+                                            <CardDescription className="text-white">Organização da Sociedade Civil (OSC) fundada em 2006</CardDescription>
                                         </div>
                                     </div>
                                 </CardHeader>
@@ -1465,7 +1457,7 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                     <img
                                         src="/apple-touch-icon.png"
                                         alt="Logo Instituto Cultural Bantu"
-                                        className="size-full w-[32px] object-contain rounded-xl"
+                                        className="size-full  object-contain rounded-xl"
                                         onError={(e) => {
                                             e.currentTarget.style.display = 'none';
                                             const fallback = e.currentTarget.parentElement?.querySelector('.fallback-ib');
