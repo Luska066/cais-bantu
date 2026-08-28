@@ -150,39 +150,39 @@ class LandingPageSeeder extends Seeder
         }
 
         // 3. Notícias
-        // $news = [
-        //     [
-        //         'slug' => 'edital-2026-aberto-300-vagas-gratuitas-cais-bantu',
-        //         'title' => 'Edital 2026 Aberto: 300 Vagas Gratuitas no CAIS BANTU',
-        //         'category' => 'Inscrições',
-        //         'date_label' => '15 de Agosto de 2026',
-        //         'description' => 'Inscrições abertas para as unidades Salvador e Vera Cruz. Conheça os critérios e garanta sua participação.',
-        //         'content' => 'O Instituto Cultural Bantu torna público o edital de seleção para as 10 turmas de qualificação profissional...',
-        //         'published' => true,
-        //     ],
-        //     [
-        //         'slug' => 'capoeira-angola-e-saude-mental',
-        //         'title' => 'Capoeira Angola e Saúde Mental: O Papel da Ancestralidade',
-        //         'category' => 'Metodologia',
-        //         'date_label' => '08 de Agosto de 2026',
-        //         'description' => 'Artigo sobre como as rodas de Capoeira Angola funcionam como espaço de escuta, corpo e tecnologia social.',
-        //         'content' => 'A Capoeira Angola transcende a arte marcial tornando-se uma rica tecnologia social comunitária...',
-        //         'published' => true,
-        //     ],
-        //     [
-        //         'slug' => 'inauguracao-polo-inclusao-digital-itaparica',
-        //         'title' => 'Inauguração do Polo de Inclusão Digital na Ilha de Itaparica',
-        //         'category' => 'Unidades',
-        //         'date_label' => '28 de Julho de 2026',
-        //         'description' => 'Nova sala multimídia atenderá jovens e pescadores artesanais no município de Vera Cruz.',
-        //         'content' => 'Com equipamentos de última geração e internet de alta velocidade, a nova unidade atenderá dezenas de famílias...',
-        //         'published' => true,
-        //     ],
-        // ];
+        $news = [
+            [
+                'slug' => 'edital-2026-aberto-300-vagas-gratuitas-cais-bantu',
+                'title' => 'Edital 2026 Aberto: 300 Vagas Gratuitas no CAIS BANTU',
+                'category' => 'Inscrições',
+                'date_label' => '15 de Agosto de 2026',
+                'description' => 'Inscrições abertas para as unidades Salvador e Vera Cruz. Conheça os critérios e garanta sua participação.',
+                'content' => 'O Instituto Cultural Bantu torna público o edital de seleção para as 10 turmas de qualificação profissional...',
+                'published' => true,
+            ],
+            [
+                'slug' => 'capoeira-angola-e-saude-mental',
+                'title' => 'Capoeira Angola e Saúde Mental: O Papel da Ancestralidade',
+                'category' => 'Metodologia',
+                'date_label' => '08 de Agosto de 2026',
+                'description' => 'Artigo sobre como as rodas de Capoeira Angola funcionam como espaço de escuta, corpo e tecnologia social.',
+                'content' => 'A Capoeira Angola transcende a arte marcial tornando-se uma rica tecnologia social comunitária...',
+                'published' => true,
+            ],
+            [
+                'slug' => 'inauguracao-polo-inclusao-digital-itaparica',
+                'title' => 'Inauguração do Polo de Inclusão Digital na Ilha de Itaparica',
+                'category' => 'Unidades',
+                'date_label' => '28 de Julho de 2026',
+                'description' => 'Nova sala multimídia atenderá jovens e pescadores artesanais no município de Vera Cruz.',
+                'content' => 'Com equipamentos de última geração e internet de alta velocidade, a nova unidade atenderá dezenas de famílias...',
+                'published' => true,
+            ],
+        ];
 
-        // foreach ($news as $n) {
-        //     CaisNews::updateOrCreate(['slug' => $n['slug']], $n);
-        // }
+        foreach ($news as $n) {
+            CaisNews::updateOrCreate(['slug' => $n['slug']], $n);
+        }
 
         // 4. Equipe Oficial
         CaisTeamMember::truncate();
