@@ -331,20 +331,31 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
 
             {/* 2. NAVBAR */}
             <nav className="sticky top-0 z-50 bg-[#0D1640]/95 backdrop-blur-md border-b border-white/10 text-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
                     {/* Brand */}
-                    <a href="#" className="flex items-center gap-3 group">
-                        <div className="flex size-50 items-center justify-center rounded-2xl p-1 group-hover:scale-105 transition-transform overflow-hidden">
+                    <a href="#" className="flex items-center gap-3.5 group">
+                        <div className="flex size-14 sm:size-16 shrink-0 items-center justify-center rounded-full bg-white/10 p-1 group-hover:scale-105 transition-transform overflow-hidden ring-2 ring-[#FFBE00]/40 shadow-md">
                             <img
                                 src="/apple-touch-icon.png"
-                                alt="Logo Instituto Cultural Bantu"
-                                className="size-full object-contain rounded-xl"
+                                alt="Logo CAIS Bantu"
+                                className="size-full object-contain rounded-full"
                                 onError={(e) => {
                                     e.currentTarget.style.display = 'none';
                                     const fallback = e.currentTarget.parentElement?.querySelector('.fallback-ib');
                                     if (fallback) (fallback as HTMLElement).style.display = 'flex';
                                 }}
                             />
+                            <div className="fallback-ib hidden size-full items-center justify-center rounded-full bg-[#FFBE00] font-display text-xs font-bold text-[#0D1640]">
+                                CAIS
+                            </div>
+                        </div>
+                        <div className="flex flex-col text-left">
+                            <span className="font-display text-lg sm:text-xl font-bold tracking-tight text-white leading-tight">
+                                CAIS BANTU
+                            </span>
+                            <span className="text-[11px] font-semibold text-[#FFBE00] leading-tight mt-0.5">
+                                Direitos • Inclusão • Cidadania
+                            </span>
                         </div>
                     </a>
 
@@ -362,7 +373,6 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
 
                     {/* Actions */}
                     <div className="hidden sm:flex items-center gap-3">
-
                         <a href="#inscricoes">
                             <Button variant="accent" className="bg-[#FFBE00] text-[#0D1640] hover:bg-[#E5AB00] font-bold shadow-md shadow-[#FFBE00]/20">
                                 Onde se Inscrever
@@ -427,10 +437,12 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                         <ScrollReveal direction="up" delay={50} className="lg:col-span-7 space-y-6 text-center lg:text-left">
-                            <Badge className="bg-[#FFBE00] text-[#0D1640] font-bold py-1 px-3.5 text-xs hover:bg-[#FFBE00]/90">
-                                <Sparkles className="size-3.5 mr-1.5" />
-                                {heroBadge}
-                            </Badge>
+                            <div className="inline-flex items-center gap-2.5">
+                                <Badge className="bg-[#FFBE00] text-[#0D1640] font-bold py-1.5 px-3.5 text-xs hover:bg-[#FFBE00]/90 shadow-sm">
+                                    <Sparkles className="size-3.5 mr-1.5" />
+                                    {heroBadge}
+                                </Badge>
+                            </div>
 
                             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1]">
                                 {heroTitle}
@@ -465,17 +477,26 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                             </div>
                         </ScrollReveal>
 
-                        {/* Right Hero Card: Metas */}
+                        {/* Right Hero Card: Metas & Selo Oficial */}
                         <ScrollReveal direction="left" delay={200} className="lg:col-span-5">
                             <div className="relative rounded-3xl bg-white/5 p-6 sm:p-8 border border-white/15 backdrop-blur-xl shadow-2xl space-y-6">
                                 <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                                    <div>
-                                        <span className="text-xs font-semibold uppercase tracking-wider text-[#FFBE00]">
-                                            Edição Oficial 2026
-                                        </span>
-                                        <h2 className="font-display text-xl font-bold text-white">
-                                            Metas & Alcance
-                                        </h2>
+                                    <div className="flex items-center gap-3.5">
+                                        <div className="flex size-16 sm:size-20 shrink-0 items-center justify-center rounded-full bg-white/10 p-1 ring-2 ring-[#FFBE00]/40 shadow-lg overflow-hidden">
+                                            <img
+                                                src="/apple-touch-icon.png"
+                                                alt="Selo Oficial CAIS Bantu"
+                                                className="size-full object-contain rounded-full"
+                                            />
+                                        </div>
+                                        <div>
+                                            <span className="text-xs font-semibold uppercase tracking-wider text-[#FFBE00]">
+                                                Edição Oficial 2026
+                                            </span>
+                                            <h2 className="font-display text-xl font-bold text-white">
+                                                Metas & Alcance
+                                            </h2>
+                                        </div>
                                     </div>
                                     <Badge variant="outline" className="border-[#FFBE00]/40 text-[#FFBE00] bg-[#FFBE00]/10">
                                         100% Gratuito
@@ -553,7 +574,6 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                         <p className="text-sm text-muted-foreground mt-0.5">Suporte psicológico, assistência social e orientação para o acesso a direitos.</p>
                                     </div>
                                 </div>
-
                                 <div className="flex items-start gap-3.5">
                                     <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#1A4FD6] text-white font-bold">
                                         <CheckCircle2 className="size-5" />
@@ -563,7 +583,6 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                                         <p className="text-sm text-muted-foreground mt-0.5">Cursos práticos voltados à qualificação profissional, à inclusão produtiva e à geração de autonomia.</p>
                                     </div>
                                 </div>
-
                                 <div className="flex items-start gap-3.5">
                                     <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#FFBE00] text-[#0D1640] font-bold">
                                         <CheckCircle2 className="size-5" />
@@ -580,22 +599,25 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                         <ScrollReveal direction="left" delay={200} className="lg:col-span-6">
                             <Card className="border-[#1A4FD6]/20 bg-card shadow-lg rounded-3xl p-6 sm:p-8">
                                 <CardHeader className="p-0 pb-4">
-                                    <div className="flex items-center bg-[#0D1640] rounded-md gap-3">
-                                        <div className="flex aspect-square h-20 size-40 items-center justify-center  text-[#FFBE00] font-display font-bold text-lg">
+                                    <div className="flex items-center bg-[#0D1640] rounded-2xl p-4 gap-4">
+                                        <div className="flex size-20 sm:size-24 shrink-0 items-center justify-center rounded-full bg-white/10 p-1 shadow-md ring-2 ring-[#FFBE00]/40 overflow-hidden">
                                             <img
                                                 src="/apple-touch-icon.png"
-                                                alt="Logo Instituto Cultural Bantu"
-                                                className="size-30 object-contain rounded-xl"
+                                                alt="Logo CAIS Bantu"
+                                                className="size-full object-contain rounded-full"
                                                 onError={(e) => {
                                                     e.currentTarget.style.display = 'none';
                                                     const fallback = e.currentTarget.parentElement?.querySelector('.fallback-ib');
                                                     if (fallback) (fallback as HTMLElement).style.display = 'flex';
                                                 }}
                                             />
+                                            <div className="fallback-ib hidden size-full items-center justify-center rounded-full bg-[#FFBE00] font-display text-sm font-bold text-[#0D1640]">
+                                                CAIS
+                                            </div>
                                         </div>
                                         <div>
-                                            <CardTitle className="text-xl text-white">Instituto Cultural Bantu</CardTitle>
-                                            <CardDescription className="text-white">Organização da Sociedade Civil (OSC) fundada em 2006</CardDescription>
+                                            <CardTitle className="text-xl sm:text-2xl text-white">Instituto Cultural Bantu</CardTitle>
+                                            <CardDescription className="text-[#9AA5C4] mt-1">Organização da Sociedade Civil (OSC) fundada em 2006</CardDescription>
                                         </div>
                                     </div>
                                 </CardHeader>
@@ -1487,22 +1509,30 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                     <ScrollReveal direction="up" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
                         {/* Coluna 1: Logo & Sobre */}
                         <div className="space-y-4">
-                            <div className="flex items-center gap-3">
-                                <div className="flex aspect-square size-12 items-center justify-center rounded-2xl bg-white/10 p-1 shadow-md overflow-hidden ring-1 ring-white/20">
+                            <div className="flex items-center gap-3.5">
+                                <div className="flex size-16 sm:size-20 shrink-0 items-center justify-center rounded-full bg-white/10 p-1 shadow-md overflow-hidden ring-2 ring-[#FFBE00]/30">
                                     <img
                                         src="/apple-touch-icon.png"
-                                        alt="Logo Instituto Cultural Bantu"
-                                        className="size-full  object-contain rounded-xl"
+                                        alt="Logo CAIS Bantu"
+                                        className="size-full object-contain rounded-full"
                                         onError={(e) => {
                                             e.currentTarget.style.display = 'none';
                                             const fallback = e.currentTarget.parentElement?.querySelector('.fallback-ib');
                                             if (fallback) (fallback as HTMLElement).style.display = 'flex';
                                         }}
                                     />
+                                    <div className="fallback-ib hidden size-full items-center justify-center rounded-full bg-[#FFBE00] font-display text-sm font-bold text-[#0D1640]">
+                                        CAIS
+                                    </div>
                                 </div>
-                                <span className="font-display font-bold text-base text-white">
-                                    CAIS BANTU
-                                </span>
+                                <div className="flex flex-col">
+                                    <span className="font-display font-bold text-lg sm:text-xl text-white leading-tight">
+                                        CAIS BANTU
+                                    </span>
+                                    <span className="text-[11px] text-[#FFBE00] font-semibold mt-0.5">
+                                        Direitos • Inclusão • Cidadania
+                                    </span>
+                                </div>
                             </div>
                             <p className="text-xs text-[#9AA5C4] leading-relaxed">
                                 Centro de Acesso a Direitos e Inclusão Social Afrocentrado. Realização do Instituto Cultural Bantu (OSC fundada em 2006).
