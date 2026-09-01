@@ -78,49 +78,49 @@
 
         {{-- JSON-LD Schema.org for Search Engines and AI Crawlers --}}
         <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@graph": [
-                {
-                    "@type": "WebSite",
-                    "@id": "https://caisbantu.com.br/#website",
-                    "url": "https://caisbantu.com.br",
-                    "name": "CAIS BANTU",
-                    "alternateName": ["Cais Bantu", "Projeto CAIS BANTU", "Instituto Cultural Bantu"],
-                    "description": "Centro de Acesso a Direitos e Inclusão Social na Política sobre Drogas. Formação profissional gratuita de 160h em Salvador e Vera Cruz / Ilha de Itaparica.",
-                    "inLanguage": "pt-BR"
-                },
-                {
-                    "@type": "NGO",
-                    "@id": "https://caisbantu.com.br/#organization",
-                    "name": "CAIS BANTU — Instituto Cultural Bantu",
-                    "alternateName": ["CAIS BANTU", "Instituto Bantu"],
-                    "url": "https://caisbantu.com.br",
-                    "logo": "https://caisbantu.com.br/apple-touch-icon.png",
-                    "telephone": "+55-71-99225-4706",
-                    "email": "bantu-contato@institutobantu.org",
-                    "address": [
-                        {
-                            "@type": "PostalAddress",
-                            "name": "Polo Salvador (Núcleo SSA)",
-                            "streetAddress": "Rua Mello Moraes Filho, nº 392 – Fazenda Grande do Retiro",
-                            "addressLocality": "Salvador",
-                            "addressRegion": "BA",
-                            "addressCountry": "BR"
-                        },
-                        {
-                            "@type": "PostalAddress",
-                            "name": "Polo Vera Cruz (Casa Bantu Vila Rosa)",
-                            "streetAddress": "Rua do Congo, nº 25 – Loteamento Parque das Mangueiras",
-                            "addressLocality": "Vera Cruz",
-                            "postalCode": "44470-000",
-                            "addressRegion": "BA",
-                            "addressCountry": "BR"
-                        }
+        {!! json_encode([
+            '@context' => 'https://schema.org',
+            '@graph' => [
+                [
+                    '@type' => 'WebSite',
+                    '@id' => 'https://caisbantu.com.br/#website',
+                    'url' => 'https://caisbantu.com.br',
+                    'name' => 'CAIS BANTU',
+                    'alternateName' => ['Cais Bantu', 'Projeto CAIS BANTU', 'Instituto Cultural Bantu'],
+                    'description' => 'Centro de Acesso a Direitos e Inclusão Social na Política sobre Drogas. Formação profissional gratuita de 160h em Salvador e Vera Cruz / Ilha de Itaparica.',
+                    'inLanguage' => 'pt-BR'
+                ],
+                [
+                    '@type' => 'NGO',
+                    '@id' => 'https://caisbantu.com.br/#organization',
+                    'name' => 'CAIS BANTU — Instituto Cultural Bantu',
+                    'alternateName' => ['CAIS BANTU', 'Instituto Bantu'],
+                    'url' => 'https://caisbantu.com.br',
+                    'logo' => 'https://caisbantu.com.br/apple-touch-icon.png',
+                    'telephone' => '+55-71-99225-4706',
+                    'email' => 'bantu-contato@institutobantu.org',
+                    'address' => [
+                        [
+                            '@type' => 'PostalAddress',
+                            'name' => 'Polo Salvador (Núcleo SSA)',
+                            'streetAddress' => 'Rua Mello Moraes Filho, nº 392 – Fazenda Grande do Retiro',
+                            'addressLocality' => 'Salvador',
+                            'addressRegion' => 'BA',
+                            'addressCountry' => 'BR'
+                        ],
+                        [
+                            '@type' => 'PostalAddress',
+                            'name' => 'Polo Vera Cruz (Casa Bantu Vila Rosa)',
+                            'streetAddress' => 'Rua do Congo, nº 25 – Loteamento Parque das Mangueiras',
+                            'addressLocality' => 'Vera Cruz',
+                            'postalCode' => '44470-000',
+                            'addressRegion' => 'BA',
+                            'addressCountry' => 'BR'
+                        ]
                     ]
-                }
+                ]
             ]
-        }
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
         </script>
     </head>
     <body class="font-sans antialiased">
