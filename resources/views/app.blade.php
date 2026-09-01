@@ -41,11 +41,28 @@
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
         <meta name="theme-color" content="#0D1640">
 
-        {{-- Default fallback metadata for crawlers that don't execute JS --}}
-        <meta name="description" content="CAIS BANTU — Centro de Acesso a Direitos, Inclusão Social e Cursos Gratuitos de 160h em Salvador e Vera Cruz / Ilha de Itaparica.">
-        <meta name="keywords" content="CAIS BANTU, Instituto Bantu, cursos gratuitos salvador, vera cruz, inclusão social, qualificação profissional">
+        {{-- Primary SEO metadata for Search Engines & Social Crawlers --}}
+        <meta name="title" content="CAIS BANTU — Centro de Acesso a Direitos, Inclusão Social e Cursos Gratuitos | Salvador e Vera Cruz">
+        <meta name="description" content="CAIS BANTU: 300 vagas gratuitas em cursos profissionalizantes de 160h com certificação oficial e acolhimento psicossocial em Salvador e Vera Cruz / Ilha de Itaparica - BA.">
+        <meta name="keywords" content="CAIS BANTU, Instituto Cultural Bantu, Instituto Bantu, cais bantu, cursos gratuitos salvador, cursos gratuitos vera cruz, ilha de itaparica, inclusão social, qualificação profissional 160h, senad mjsp">
         <meta name="author" content="Instituto Cultural Bantu">
-        <meta name="robots" content="index, follow">
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+        <meta name="language" content="Portuguese">
+        
+        {{-- Open Graph / Facebook / WhatsApp --}}
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="pt_BR">
+        <meta property="og:site_name" content="CAIS BANTU — Instituto Cultural Bantu">
+        <meta property="og:title" content="CAIS BANTU — Centro de Acesso a Direitos, Inclusão Social e Cursos Gratuitos">
+        <meta property="og:description" content="Inscrições abertas para 300 vagas gratuitas em formação profissional de 160h e suporte psicossocial nos polos Salvador e Vera Cruz.">
+        <meta property="og:image" content="/apple-touch-icon.png">
+        <meta property="og:url" content="{{ url()->current() }}">
+
+        {{-- Twitter --}}
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="CAIS BANTU — Cursos Gratuitos e Inclusão Social">
+        <meta name="twitter:description" content="Centro de Acesso a Direitos e Inclusão Social Afrocentrado: 300 vagas em Salvador e Vera Cruz / Ilha de Itaparica.">
+        <meta name="twitter:image" content="/apple-touch-icon.png">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

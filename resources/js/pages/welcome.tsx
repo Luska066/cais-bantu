@@ -364,10 +364,18 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
                         '@context': 'https://schema.org',
                         '@graph': [
                             {
+                                '@type': 'WebSite',
+                                '@id': '#website',
+                                name: 'CAIS BANTU',
+                                alternateName: ['Cais Bantu', 'Projeto CAIS BANTU', 'Instituto Cultural Bantu'],
+                                description: 'Portal Oficial do CAIS BANTU — Cursos Gratuitos de 160h, Inclusão Social e Acesso a Direitos em Salvador e Vera Cruz / Ilha de Itaparica.',
+                                inLanguage: 'pt-BR',
+                            },
+                            {
                                 '@type': 'NGO',
                                 '@id': '#organization',
-                                name: 'Instituto Cultural Bantu',
-                                alternateName: 'CAIS BANTU',
+                                name: 'CAIS BANTU — Instituto Cultural Bantu',
+                                alternateName: ['CAIS BANTU', 'Cais Bantu', 'Instituto Bantu', 'Instituto Cultural Bantu'],
                                 description: 'Centro de Acesso a Direitos e Inclusão Social na Política sobre Drogas. Projeto realizado pelo Instituto Cultural Bantu em parceria com a SENAD/MJSP.',
                                 logo: '/apple-touch-icon.png',
                                 telephone: '+55-71-99225-4706',
