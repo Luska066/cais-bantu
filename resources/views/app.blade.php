@@ -75,8 +75,74 @@
         <x-inertia::head>
             <title>{{ config('app.name', 'CAIS BANTU — Instituto Cultural Bantu') }}</title>
         </x-inertia::head>
+
+        {{-- JSON-LD Schema.org for Search Engines and AI Crawlers --}}
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "@id": "https://caisbantu.com.br/#website",
+                    "url": "https://caisbantu.com.br",
+                    "name": "CAIS BANTU",
+                    "alternateName": ["Cais Bantu", "Projeto CAIS BANTU", "Instituto Cultural Bantu"],
+                    "description": "Centro de Acesso a Direitos e Inclusão Social na Política sobre Drogas. Formação profissional gratuita de 160h em Salvador e Vera Cruz / Ilha de Itaparica.",
+                    "inLanguage": "pt-BR"
+                },
+                {
+                    "@type": "NGO",
+                    "@id": "https://caisbantu.com.br/#organization",
+                    "name": "CAIS BANTU — Instituto Cultural Bantu",
+                    "alternateName": ["CAIS BANTU", "Instituto Bantu"],
+                    "url": "https://caisbantu.com.br",
+                    "logo": "https://caisbantu.com.br/apple-touch-icon.png",
+                    "telephone": "+55-71-99225-4706",
+                    "email": "bantu-contato@institutobantu.org",
+                    "address": [
+                        {
+                            "@type": "PostalAddress",
+                            "name": "Polo Salvador (Núcleo SSA)",
+                            "streetAddress": "Rua Mello Moraes Filho, nº 392 – Fazenda Grande do Retiro",
+                            "addressLocality": "Salvador",
+                            "addressRegion": "BA",
+                            "addressCountry": "BR"
+                        },
+                        {
+                            "@type": "PostalAddress",
+                            "name": "Polo Vera Cruz (Casa Bantu Vila Rosa)",
+                            "streetAddress": "Rua do Congo, nº 25 – Loteamento Parque das Mangueiras",
+                            "addressLocality": "Vera Cruz",
+                            "postalCode": "44470-000",
+                            "addressRegion": "BA",
+                            "addressCountry": "BR"
+                        }
+                    ]
+                }
+            ]
+        }
+        </script>
     </head>
     <body class="font-sans antialiased">
+        <noscript>
+            <div style="padding: 24px; font-family: sans-serif; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                <h1>CAIS BANTU — Centro de Acesso a Direitos e Inclusão Social</h1>
+                <p><strong>Uma iniciativa do Instituto Cultural Bantu em parceria com a SENAD/MJSP.</strong></p>
+                <p>O CAIS BANTU oferece 300 vagas gratuitas em cursos de qualificação profissional de 160 horas com certificação oficial, lanche no local e acolhimento psicossocial nos polos Salvador e Vera Cruz (Ilha de Itaparica) na Bahia.</p>
+                <h2>Cursos Oferecidos:</h2>
+                <ul>
+                    <li><strong>Letramento Digital (160h):</strong> Informática básica, produtividade, internet segura e ferramentas digitais.</li>
+                    <li><strong>Empreendedorismo e Artesanato (160h):</strong> Economia criativa, gestão de microempreendimentos e precificação.</li>
+                    <li><strong>Produção Audiovisual (160h):</strong> Fotografia, captação e edição de vídeo para mídias digitais.</li>
+                    <li><strong>Instrutor(a) de Ioga (160h):</strong> Práticas integrativas, respiração e bem-estar comunitário.</li>
+                    <li><strong>Agente Ambiental (160h):</strong> Sustentabilidade, reciclagem e conservação ecológica.</li>
+                </ul>
+                <h2>Polos de Atendimento:</h2>
+                <p><strong>Salvador (Núcleo SSA):</strong> Rua Mello Moraes Filho, nº 392 – Fazenda Grande do Retiro, Salvador – BA | Tel: (71) 99642-8078</p>
+                <p><strong>Vera Cruz (Casa Bantu Vila Rosa):</strong> Rua do Congo, nº 25 – Loteamento Parque das Mangueiras, Vera Cruz – BA | Tel: (71) 99225-4706</p>
+                <p>E-mail: bantu-contato@institutobantu.org</p>
+            </div>
+        </noscript>
         <x-inertia::app />
     </body>
 </html>
