@@ -39,6 +39,13 @@
         <link rel="icon" href="/favicon.ico" sizes="any">
         <link rel="icon" href="/favicon.svg" type="image/svg+xml">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <meta name="theme-color" content="#0D1640">
+
+        {{-- Default fallback metadata for crawlers that don't execute JS --}}
+        <meta name="description" content="CAIS BANTU — Centro de Acesso a Direitos, Inclusão Social e Cursos Gratuitos de 160h em Salvador e Vera Cruz / Ilha de Itaparica.">
+        <meta name="keywords" content="CAIS BANTU, Instituto Bantu, cursos gratuitos salvador, vera cruz, inclusão social, qualificação profissional">
+        <meta name="author" content="Instituto Cultural Bantu">
+        <meta name="robots" content="index, follow">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,7 +56,7 @@
         @viteReactRefresh
         @vite(['resources/css/app.css', 'resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
         <x-inertia::head>
-            <title>{{ config('app.name', 'Instituto Bantu') }}</title>
+            <title>{{ config('app.name', 'CAIS BANTU — Instituto Cultural Bantu') }}</title>
         </x-inertia::head>
     </head>
     <body class="font-sans antialiased">

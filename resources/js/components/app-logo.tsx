@@ -24,4 +24,6 @@ export default function AppLogo() {
                     Instituto Cultural Bantu
                 </span>
             </div>
-        </div
+        </div>
+    );
+}

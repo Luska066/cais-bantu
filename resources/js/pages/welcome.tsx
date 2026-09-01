@@ -314,7 +314,101 @@ export default function Welcome({ settings = {}, courses = defaultCourses, news 
 
     return (
         <div className="min-h-screen bg-[#F2F5FF] text-[#0D1640] dark:bg-[#0D1640] dark:text-white font-sans antialiased selection:bg-[#FFBE00] selection:text-[#0D1640]">
-            <Head title="CAIS BANTU — Centro de Acesso a Direitos e Inclusão Social Afrocentrado" />
+            <Head>
+                {/* 1. Primary Meta Tags */}
+                <title>CAIS BANTU — Centro de Acesso a Direitos, Inclusão Social e Cursos Gratuitos | Salvador e Vera Cruz</title>
+                <meta name="title" content="CAIS BANTU — Centro de Acesso a Direitos, Inclusão Social e Cursos Gratuitos | Salvador e Vera Cruz" />
+                <meta
+                    name="description"
+                    content="O CAIS BANTU oferece 300 vagas gratuitas em cursos profissionalizantes de 160h com certificação oficial, acolhimento psicossocial e tecnologia social afrocentrada nos polos Salvador e Vera Cruz / Ilha de Itaparica - BA."
+                />
+                <meta
+                    name="keywords"
+                    content="CAIS BANTU, Instituto Cultural Bantu, cursos gratuitos salvador, cursos gratuitos vera cruz, ilha de itaparica cursos, inclusao social bahia, formacao profissional salvador, senad mjsp politica sobre drogas, tecnologia social afrocentrada, letramento digital, producao audiovisual, empreendedorismo artesanato, instrutor ioga, agente ambiental"
+                />
+                <meta name="author" content="Instituto Cultural Bantu" />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+                <meta name="language" content="Portuguese" />
+                <meta name="theme-color" content="#0D1640" />
+
+                {/* 2. Geo Tags (Local SEO Salvador & Vera Cruz) */}
+                <meta name="geo.region" content="BR-BA" />
+                <meta name="geo.placename" content="Salvador, Vera Cruz, Bahia" />
+                <meta name="geo.position" content="-12.9714;-38.5014" />
+                <meta name="ICBM" content="-12.9714, -38.5014" />
+
+                {/* 3. Open Graph / Facebook / WhatsApp */}
+                <meta property="og:type" content="website" />
+                <meta property="og:locale" content="pt_BR" />
+                <meta property="og:site_name" content="CAIS BANTU — Instituto Cultural Bantu" />
+                <meta property="og:title" content="CAIS BANTU — Centro de Acesso a Direitos, Inclusão Social e Cursos Gratuitos" />
+                <meta
+                    property="og:description"
+                    content="Inscrições abertas para 300 vagas gratuitas em formação profissional de 160h e suporte psicossocial nos polos Salvador e Vera Cruz."
+                />
+                <meta property="og:image" content="/apple-touch-icon.png" />
+                <meta property="og:image:alt" content="Logo Oficial CAIS BANTU — Direitos, Inclusão e Cidadania" />
+
+                {/* 4. Twitter Cards */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="CAIS BANTU — Cursos Gratuitos e Inclusão Social" />
+                <meta
+                    name="twitter:description"
+                    content="Centro de Acesso a Direitos e Inclusão Social Afrocentrado: 300 vagas em Salvador e Vera Cruz / Ilha de Itaparica."
+                />
+                <meta name="twitter:image" content="/apple-touch-icon.png" />
+
+                {/* 5. JSON-LD Structured Data (Schema.org) */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@graph': [
+                            {
+                                '@type': 'NGO',
+                                '@id': '#organization',
+                                name: 'Instituto Cultural Bantu',
+                                alternateName: 'CAIS BANTU',
+                                description: 'Centro de Acesso a Direitos e Inclusão Social na Política sobre Drogas. Projeto realizado pelo Instituto Cultural Bantu em parceria com a SENAD/MJSP.',
+                                logo: '/apple-touch-icon.png',
+                                telephone: '+55-71-99225-4706',
+                                email: 'bantu-contato@institutobantu.org',
+                                address: [
+                                    {
+                                        '@type': 'PostalAddress',
+                                        name: 'Polo Salvador (Núcleo SSA)',
+                                        streetAddress: 'Rua Mello Moraes Filho, nº 392 – Fazenda Grande do Retiro',
+                                        addressLocality: 'Salvador',
+                                        addressRegion: 'BA',
+                                        addressCountry: 'BR',
+                                    },
+                                    {
+                                        '@type': 'PostalAddress',
+                                        name: 'Polo Vera Cruz (Casa Bantu Vila Rosa)',
+                                        streetAddress: 'Rua do Congo, nº 25 – Loteamento Parque das Mangueiras',
+                                        addressLocality: 'Vera Cruz',
+                                        postalCode: '44470-000',
+                                        addressRegion: 'BA',
+                                        addressCountry: 'BR',
+                                    },
+                                ],
+                            },
+                            {
+                                '@type': 'EducationalOccupationalProgram',
+                                name: 'Programa de Formação Profissional CAIS BANTU 2026',
+                                description: 'Qualificação profissional gratuita de 160h com certificação oficial, material didático e acolhimento psicossocial.',
+                                timeToComplete: 'PT160H',
+                                educationalCredentialAwarded: 'Certificação Profissional Oficial',
+                                offers: {
+                                    '@type': 'Offer',
+                                    price: '0.00',
+                                    priceCurrency: 'BRL',
+                                    availability: 'https://schema.org/InStock',
+                                },
+                            },
+                        ],
+                    })}
+                </script>
+            </Head>
 
             {/* 1. TOP ANNOUNCEMENT BAR */}
             {announcementActive && (

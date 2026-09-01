@@ -406,7 +406,7 @@
     ]
   },
   "resources/css/app.css": {
-    "file": "assets/app-Bl8M0UYA.css",
+    "file": "assets/app-Cctm_V-v.css",
     "name": "app",
     "names": [
       "app.css"
@@ -415,7 +415,7 @@
     "isEntry": true
   },
   "resources/js/app.tsx": {
-    "file": "assets/app-BudZ55vI.js",
+    "file": "assets/app-DP6ZQQ2N.js",
     "name": "app",
     "src": "resources/js/app.tsx",
     "isEntry": true,
@@ -757,7 +757,7 @@
     ]
   },
   "resources/js/pages/welcome.tsx": {
-    "file": "assets/welcome-ZVvNSKIQ.js",
+    "file": "assets/welcome-Cp4hNRCd.js",
     "name": "welcome",
     "src": "resources/js/pages/welcome.tsx",
     "isDynamicEntry": true,
